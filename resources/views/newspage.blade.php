@@ -12,19 +12,34 @@
 
 @if(!empty($news_obj))
 
-<h1>{{ $news_obj->newstitle }}</h1>
-<p>
-  Postagem: {{ $news_obj->newsdate->format('d/m/Y') }}
-</p>
+  <h1>{{ $news_obj->newstitle }}</h1>
+  <p>
+    Postagem: {{ $news_obj->newsdate->format('d/m/Y') }}
+  </p>
 
-<p>
-  {{ $news_obj->subtitle }}
-  <br>
-  {{ $news_obj->description }}
-</p>
+  <p>
+    {{ $news_obj->subtitle }}
+    <br>
+    Descrição: {{ $news_obj->description }}
+  </p>
 
-<hr>
-  {!! $news_obj->htmlnewspiece !!}
+  <hr>
+    {!! $news_obj->htmlnewspiece !!}
+
+  <p>
+    Cursos do
+    <a href="{{ $news_obj->get_sabdirdois_http_url() }}">
+      Saber Direito
+    </a> relacionados:
+  </p>
+  @foreach($news_obj->sabdircursos as $curso)
+  <p>
+    {{ $loop->iteration }} - 
+    <a href="{{ $news_obj->gen_outer_url_for_course($curso) }}">
+      {{ $curso->title }}
+    </a>
+  </p>
+  @endforeach
 
 @endif
 

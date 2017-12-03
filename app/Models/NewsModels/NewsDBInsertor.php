@@ -3,7 +3,7 @@ namespace App\Models\NewsModels;
 // use App\Models\NewsModels\NewsDBInsertor;
 
 use App\Models\NewsModels\NewsObject;
-use App\Models\Util\UtilParams;
+use App\Models\Util\FileSystemUtil;
 use Carbon\Carbon;
 use Parsedown;
 
@@ -17,21 +17,41 @@ class NewsDBInsertor {
   }
 
   public function get_current_abspath($year_n_month_path) {
-    $baserelfolder = UtilParams::NOTICIAS_MD_1STFOLDERAFTERSTORAGE;
+    $baserelfolder = FileSystemUtil::NOTICIAS_MD_1STFOLDERAFTERSTORAGE;
     $baserelfolder .= '/' . $year_n_month_path;
     return storage_path($baserelfolder);
   }
 
-  private function insertNewsObject($datestr, $newstitle, $subtitle, $underlined_newstitle) {
+  private function insertNewsObject(
+      $datestr, $newstitle, $subtitle, $description,
+      $underlined_newstitle, $related_sabdircursos
+  ) {
     echo "datestr $datestr";
     echo "newstitle $newstitle";
     echo "subtitle $subtitle";
-    echo "underlined_newstitle $underlined_newstitle \n";
-    $o = new NewsObject();
-    $o->newsdate  = $datestr;
-    $o->newstitle = $newstitle;
-    $o->subtitle  = $subtitle;
+    echo "underlined_newstitle $underlined_newstitle";
+    foreach ($related_sabdircursos as $cursodate) {
+      echo "cursodate $cursodate \n";
+    }
+    $o = NewsObject
+      ::where('newsdate', $datestr)
+      ->where('underlined_newstitle', $underlined_newstitle)
+      ->first();
+    if ($o == null) {
+      $o = new NewsObject();
+    }
+    $o->newsdate    = $datestr;
+    $o->newstitle   = $newstitle;
+    $o->subtitle    = $subtitle;
+    $o->description = $description;
     $o->underlined_newstitle = $underlined_newstitle;
+    $o->save(); // this will get news_obj an id, needed for attaching courses below
+    // clean up the attached courses to avoid duplicates
+    $o->cleanAllRelatedCourses();
+    foreach ($related_sabdircursos as $cursodate) {
+      $bool_insert = $o->addSabDirCursoByDate($cursodate);
+      echo "bool_insert for $cursodate is $bool_insert \n";
+    }
     $o->save();
   }
 
@@ -63,21 +83,27 @@ class NewsDBInsertor {
       $filename = $pp[$arraysize-1];
       $datestr = substr($filename, 0, 10);
       $newstitle = $json_aarray->newstitle;
+      /*
       if (!NewsObject
             ::where('newsdate', $datestr)
             ->where('newstitle', $newstitle)
             ->exists()) {
+            */
         $subtitle             = $json_aarray->subtitle;
         $description          = $json_aarray->description;
-        $underlined_newstitle = $json_aarray->underlined_newstitle;
-        $this->insertNewsObject($datestr, $newstitle, $subtitle, $underlined_newstitle);
-      };
+        $underlined_newstitle   = $json_aarray->underlined_newstitle;
+        $related_sabdircursos = $json_aarray->related_sabdircursos;
+        $this->insertNewsObject(
+          $datestr, $newstitle, $subtitle, $description,
+          $underlined_newstitle, $related_sabdircursos
+        );
+      //};
       $bool_didit = $this->transform_markdown_into_html($filepath);
     }
   }
 
   public function complete_dirtree_sweep() {
-    $baserelfolder = UtilParams::NOTICIAS_MD_1STFOLDERAFTERSTORAGE;
+    $baserelfolder = FileSystemUtil::NOTICIAS_MD_1STFOLDERAFTERSTORAGE;
     $path = storage_path($baserelfolder);
 
     $filesystementries = new RecursiveIteratorIterator(

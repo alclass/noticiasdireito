@@ -3,7 +3,7 @@ namespace App\Http\Controllers;
 // use App\Http\Controllers\NoticiasController;
 use App\Http\Controllers\Controller;
 use App\Models\NewsModels\NewsObject;
-use App\Models\Util\UtilParams;
+use App\Models\Util\FileSystemUtil;
 use Carbon\Carbon;
 // use Parsedown;
 
