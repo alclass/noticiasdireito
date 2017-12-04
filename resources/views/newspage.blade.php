@@ -8,7 +8,11 @@
 </head>
 
 <body>
-  <h3>Notícias do Direito.Science</h3>
+  <h3>Notícias do
+    <a href="{{ URL::to('/') }}">
+      Direito.Science
+    </a>
+  </h3>
 
 @if(!empty($news_obj))
 
@@ -19,7 +23,8 @@
 
   <p>
     {{ $news_obj->subtitle }}
-    <br>
+  </p>
+  <p>
     Descrição: {{ $news_obj->description }}
   </p>
 
@@ -34,7 +39,7 @@
   </p>
   @foreach($news_obj->sabdircursos as $curso)
   <p>
-    {{ $loop->iteration }} - 
+    {{ $loop->iteration }} -
     <a href="{{ $news_obj->gen_outer_url_for_course($curso) }}">
       {{ $curso->title }}
     </a>

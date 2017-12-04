@@ -1,6 +1,6 @@
 <?php
 namespace App\Models\NewsModels;
-// use App\Models\NewsModels\NewsDBInsertor;
+// use App\Models\NewsModels\NewsFileToDBLoader;
 
 use App\Models\NewsModels\NewsObject;
 use App\Models\Util\FileSystemUtil;
@@ -10,7 +10,7 @@ use Parsedown;
 use RecursiveIteratorIterator;
 use RecursiveDirectoryIterator;
 
-class NewsDBInsertor {
+class NewsFileToDBLoader {
 
   public function __construct() {
 
@@ -22,7 +22,7 @@ class NewsDBInsertor {
     return storage_path($baserelfolder);
   }
 
-  private function insertNewsObject(
+  private function insertOrUpdateNewsObject(
       $datestr, $newstitle, $subtitle, $description,
       $underlined_newstitle, $related_sabdircursos
   ) {
@@ -93,7 +93,7 @@ class NewsDBInsertor {
         $description          = $json_aarray->description;
         $underlined_newstitle   = $json_aarray->underlined_newstitle;
         $related_sabdircursos = $json_aarray->related_sabdircursos;
-        $this->insertNewsObject(
+        $this->insertOrUpdateNewsObject(
           $datestr, $newstitle, $subtitle, $description,
           $underlined_newstitle, $related_sabdircursos
         );
@@ -115,7 +115,7 @@ class NewsDBInsertor {
     }
   } // ends complete_dirtree_sweep()
 
-  public function timely_dirtree_sweep($starting_from_n_months_ago=1) {
+  public function load_news_since_n_months_ago($starting_from_n_months_ago=1) {
     $currentdate  = Carbon::now();
     $currentyear  = $currentdate->year;
     $currentmonth = $currentdate->month;
@@ -136,7 +136,31 @@ class NewsDBInsertor {
       $refdate->addMonths(1);
     }
 
-  } // ends timely_dirtree_sweep()
+  } // ends load_news_since_n_months_ago()
+
+  public function load_news_having_date($p_datestr=null) {
+    if ($p_datestr==null) {
+      $carbondate = Carbon::today();
+    } else {
+      $carbondate = new Carbon($p_datestr);
+    }
+    $datestr = $carbondate->format('Y-m-d');
+    $refyear  = $carbondate->year;
+    $refmonth = $carbondate->month;
+    $year_n_month_path = "$refyear/$refmonth";
+    $passingpath = $this->get_current_abspath($year_n_month_path);
+    echo "passingpath $passingpath";
+    $files = scandir($passingpath);
+    // $filearticles = [];
+    foreach ($files as $filename) {
+      $datefromfileprefix = substr($filename, 0, 10);
+      if ($datestr == $datefromfileprefix) {
+        $filepath = $passingpath . '/' . $filename;
+        $this->look_into_filepath($filepath);
+      }
+    }
+  } // ends load_news_having_date()
 
 
-} // ends class NewsDBInsertor
+
+} // ends class NewsFileToDBLoader
