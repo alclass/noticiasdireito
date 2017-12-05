@@ -9,6 +9,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class NewsObject extends Model {
 
+  public static function getLastN($n_lastones=3) {
+    return self::orderBy('newsdate', 'desc')->take($n_lastones)->get();
+  }
+
   protected $table   = 'newsobjects';
   protected $dates   = ['newsdate'];
   protected $appends = [
@@ -76,6 +80,10 @@ class NewsObject extends Model {
   public function gen_outer_url_for_course($curso) {
     return UtilParamsForNewsApp::gen_outer_url_for_course($curso);
   } // ends gen_outer_url_for_course()
+
+  public function instance_getLastN($n_lastones=3) {
+    return self::getLastN($n_lastones);
+  }
 
   // attribute sabdircursos means that some courses are related to news object
   public function sabdircursos() {
