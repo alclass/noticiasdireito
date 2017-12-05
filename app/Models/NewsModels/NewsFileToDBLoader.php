@@ -161,6 +161,11 @@ class NewsFileToDBLoader {
     }
   } // ends load_news_having_date()
 
-
-
 } // ends class NewsFileToDBLoader
+
+
+if (php_sapi_name()=='cli') {
+  $loader = new NewsFileToDBLoader();
+  echo 'Executing method load_news_since_n_months_ago(1)' . "\n";
+  $loader->load_news_since_n_months_ago(1);
+}
