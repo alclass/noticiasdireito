@@ -73,13 +73,38 @@ class NewsObject extends Model {
     }
     return false;
   }
-  public function get_sabdirdois_http_url() {
-    return UtilParamsForNewsApp::SABDIRDOIS_HTTP_URL;
+
+  public function gen_outer_url_for_course($curso, $protocol='http') {
+    return UtilParamsForNewsApp::gen_outer_url_for_course($curso, $protocol);
+  } // ends gen_outer_url_for_course()
+
+  public function gen_outer_url($protocol='http') {
+    /*
+       Notice that all elements in $this->routeurl_as_array will form,
+       in the routing function, a url as a slash-separated string,
+
+       ie $year/$month/$day/$underlined_newstitle
+
+       That's why:
+         $url_complement = implode('/', $this->routeurl_as_array);
+       below is a safe presumption.
+
+       To check this, one can look up the route definition
+         in routes/web.php (or elsewhere if it is somewhere else)
+    */
+    $noticiasdireito_http_url = UtilParamsForNewsApp::get_noticiasdireito_root_url($protocol);
+    $url_complement = implode('/', $this->routeurl_as_array);
+    $outer_url = $noticiasdireito_http_url . '/' . $url_complement;
+    return $outer_url;
   }
 
-  public function gen_outer_url_for_course($curso) {
-    return UtilParamsForNewsApp::gen_outer_url_for_course($curso);
-  } // ends gen_outer_url_for_course()
+  public function get_noticiasdireito_root_url($protocol='http') {
+    return UtilParamsForNewsApp::get_noticiasdireito_root_url($protocol);
+  }
+
+  public function get_sabdirdois_root_url($protocol='http') {
+    return UtilParamsForNewsApp::get_sabdirdois_root_url($protocol);
+  }
 
   public function instance_getLastN($n_lastones=3) {
     return self::getLastN($n_lastones);

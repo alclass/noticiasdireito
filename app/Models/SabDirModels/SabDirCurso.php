@@ -7,6 +7,7 @@ use App\Models\AcadModels\KnowledgeArea;
 use App\Models\Util\DateUtil;
 use App\Models\Util\StringUtil;
 use App\Models\Util\UtilParams;
+use App\Models\Util\UtilParamsForNewsApp;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
@@ -28,6 +29,10 @@ class SabDirCurso extends Model {
 
   public static function fetch_first_course() {
     return self::orderBy('firstemissiondate', 'asc')->first();
+  }
+
+  public static function getLastN($n_lastones=4) {
+    return self::orderBy('firstemissiondate', 'desc')->take($n_lastones)->get();
   }
 
   public static function count_courses_in_year($ano) {
@@ -118,6 +123,14 @@ class SabDirCurso extends Model {
     }
     $routeurl_as_array[] = $this->generate_urltitlepath();;
     return $routeurl_as_array;
+  }
+
+  public function gen_outer_url($protocol='http') {
+    /*
+      This method is to be used by external apps.
+      Notícias do Direito.Science uses this method.
+    */
+    return UtilParamsForNewsApp::gen_outer_url_for_course($this, $protocol);
   }
 
   public function getTitleforurlAttribute() {
@@ -454,6 +467,10 @@ class SabDirCurso extends Model {
     return $img_url;
   }
 
+  public function instance_count_cursos() {
+    return self::count();
+  }
+
   public function get_lecture_titles_as_one_text() {
     $text = '';
     foreach ($this->aulas as $aula) {
@@ -482,8 +499,6 @@ class SabDirCurso extends Model {
     $aula = $this->aulas[$index];
     return $aula;
   }
-
-
 
   public function aulas() {
     return $this->hasMany('App\Models\SabDirModels\SabDirAula', 'sabdircurso_id');
