@@ -7,6 +7,10 @@
   <title>Página de Notícia</title>
 </head>
 
+<?php
+// https://codepen.io/renaudtertrais/full/xJFny/
+?>
+
 <body>
   <h3>Notícias do
     <a href="{{ URL::to('/') }}">
@@ -33,7 +37,7 @@
 
   <p>
     Cursos do
-    <a href="{{ $news_obj->get_sabdirdois_http_url() }}">
+    <a href="{{ $news_obj->get_sabdirdois_root_url() }}">
       Saber Direito
     </a> relacionados:
   </p>
