@@ -22,3 +22,9 @@ Route::get('/{year}/{month}/{day}/{underlined_newstitle}', [
   'as' => 'newsobjroute',
   'uses' => 'NoticiasController@show_newspage',
 ]);
+
+//
+Route::get('/{year}/{month}', [
+  'as' => 'newspermonthroute',
+  'uses' => 'NoticiasController@list_news_for_month',
+]);

@@ -1,6 +1,7 @@
 <?php
 namespace App\Models\NewsModels;
 // use App\Models\NewsModels\NewsObject;
+use App\Models\NewsModels\MonthObject;
 use App\Models\Util\FileSystemUtil;
 use App\Models\SabDirModels\SabDirCurso;
 use App\Models\Util\UtilParamsForNewsApp;
@@ -108,6 +109,21 @@ class NewsObject extends Model {
 
   public function instance_getLastN($n_lastones=3) {
     return self::getLastN($n_lastones);
+  }
+
+  public function get_previous_months_as_objs($n_previous_max=5) {
+    $first_newspiece = self::orderBy('newsdate', 'asc')->first();
+    if ($first_newspiece==null) {
+      return MonthObject::make_monthobjs_as_collectof(); // use default
+    }
+    $firstdate = $first_newspiece->newsdate->copy();
+    $today = Carbon::today();
+    $n_months = $today->diffInMonths($firstdate) + 1;
+    if ($n_months > $n_previous_max) {
+      $n_months = $n_previous_max;
+    }
+    $monthobjs = MonthObject::make_monthobjs_as_collectof($n_months, $today);
+    return $monthobjs;
   }
 
   // attribute sabdircursos means that some courses are related to news object

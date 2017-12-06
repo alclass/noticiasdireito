@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Language" content="pt">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@yield('title')</title>
 
   <meta name="description" content="Portal de Notícias Jurídicas do Direito.Science">
@@ -13,10 +14,23 @@
   <meta name="author" content="Direito Dot Win Publisher Co">
 
 <!-- Bootstrap -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
+<link rel="stylesheet" href="//v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script type="text/javascript" scr="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110822744-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110822744-1');
+</script>
+
 
 
 @yield('css_section')
