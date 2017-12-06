@@ -33,21 +33,25 @@
     @foreach ($newsobjects as $news_obj)
     <div class="col-xs-12 article-wrapper">
       <article>
-        <a href="{{ route('newsobjroute', $news_obj->routeurl_as_array) }}" class="more">Acessar</a>
-        <div class="img-wrapper"><img src="http://lorempixel.com/150/150/fashion" alt="" /></div>
+        <a href="{{ route('newsobjectroute', $news_obj->routeurl_as_array) }}" class="more">Acessar</a>
         <h1>{{ $news_obj->newstitle }}</h1>
         <p>{{ $news_obj->newsdate->format('d/m/Y') }}</p>
         <p>
           {{ $news_obj->description }}
           <br>
-          <a href="{{ route('newsobjroute', $news_obj->routeurl_as_array) }}">
+          <a href="{{ route('newsobjectroute', $news_obj->routeurl_as_array) }}">
             Acessar
           </a>
         </p>
+        <div class="img-wrapper"><img src="https://i.pinimg.com/236x/32/01/6c/32016c4943083f05377f8cb3d2900f2f--lady-justice-tattoo-inspiration.jpg"
+           alt="Direito Imagem"
+           height="200" width="100" /></div>
       </article>
     </div>
     @endforeach
   </div>
+
+{{ $newsobjects->links() }}
 
 <hr>
 
@@ -63,8 +67,6 @@
 @foreach ($sabdircursos as $curso)
 <div class="col-xs-12 article-wrapper">
   <article>
-    <a href="{{ $curso->gen_outer_url() }}" class="more">Acessar</a>
-    <div class="img-wrapper"><img src="http://lorempixel.com/150/150/fashion" alt="" /></div>
     {{ $loop->iteration }} )
     <h1>{{ $curso->title }}</h1>
     <p>{{ $curso->firstemissiondate->format('d/m/Y') }}</p>
@@ -78,7 +80,7 @@
       {{ $curso->firstemissiondate->format('d/m/Y') }}
       e {{ $curso->finishdate->format('d/m/Y') }}
       <br>
-      <a href="{{ $curso->gen_outer_url() }}">
+      <a href="{{ $curso->gen_outer_url() }}" class="more">
         Acessar
       </a>
     </p>
@@ -87,6 +89,11 @@
 @endforeach
 <br>
 Estes e todos os {{ $curso->instance_count_cursos() }} cursos do acervo completo estão disponíveis a partir do Portal
+<?php
+  if (!isset($news_obj) || empty($news_obj)) {
+    $news_obj = \App\Models\NewsModels\NewsObject::get_last_or_create_mock();
+  }
+?>
 <a class="button" href="{{ $news_obj->get_sabdirdois_root_url() }}">
   Saber Direito Dois
 </a>.

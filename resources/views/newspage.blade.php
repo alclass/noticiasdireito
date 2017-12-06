@@ -1,3 +1,11 @@
+<?php
+  if(!isset($news_obj) || empty($news_obj)) {
+    $news_obj = \App\Models\NewsModels\NewsObject::get_last_or_create_mock();
+  }
+  if(empty($news_obj)) {
+    return redirect()->route('entranceroute');
+  }
+?>
 @extends('basetemplates.masterlayout')
 @section('title')
   Notícias - Portal Direito.Science
@@ -64,10 +72,23 @@
 
           <div align="center">
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="#">Anterior</a>
-            <a class="btn btn-outline-primary {{ (0==1?'disabled':'') }}" href="#">Próximo</a>
+            <a class="btn btn-outline-primary" href="{{ route('newsobjectroute', $news_obj->get_previous_or_last_routeurl_as_array()) }}">Anterior</a>
+            <a class="btn btn-outline-primary {{ (0==1?'disabled':'') }}" href="{{ route('newsobjectroute', $news_obj->get_next_or_first_routeurl_as_array()) }}">Próxima</a>
           </nav>
           </div>
+
+<p>
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-8025632868883287"
+               data-ad-slot="6238982907"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+</p>
 
 <p>
   <br>

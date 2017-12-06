@@ -22,16 +22,15 @@
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
+@if (App::environment('production'))
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110822744-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-110822744-1');
 </script>
-
-
+@endif
 
 @yield('css_section')
 </head>

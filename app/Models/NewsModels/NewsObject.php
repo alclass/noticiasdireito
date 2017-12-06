@@ -14,6 +14,25 @@ class NewsObject extends Model {
     return self::orderBy('newsdate', 'desc')->take($n_lastones)->get();
   }
 
+  public static function fetch_most_recent() {
+    return NewsObject
+      ::orderBy('newsdate', 'desc')
+      ->first();
+  }
+
+  public static function get_last_or_create_mock() {
+    $most_recent_newsobject = self::fetch_most_recent();
+    if ($most_recent_newsobject!=null) {
+      return $most_recent_newsobject;
+    }
+    $news_object = new self;
+    $news_object->newsdate = Carbon::now();
+    $news_object->newstitle = 'O principal atributo do Direito: ser honesto!';
+    $news_object->subtitle = 'O operador do Direito tem sua honra atrelada à honestidade.';
+    $news_object->description = 'O Direito é a linha de base para o que chamamos de Sociedade Democrática de Direito. O Direito preconiza: ser honesto sempre e acima de tudo!';
+    return $news_object;
+  }
+
   protected $table   = 'newsobjects';
   protected $dates   = ['newsdate'];
   protected $appends = [
@@ -124,6 +143,63 @@ class NewsObject extends Model {
     }
     $monthobjs = MonthObject::make_monthobjs_as_collectof($n_months, $today);
     return $monthobjs;
+  }
+
+  public function get_previous_newsobject_or_last() {
+    $previous_newsobject = NewsObject
+      ::where('newsdate', '<', $this->newsdate)
+      ->orderBy('newsdate', 'desc')
+      ->first();
+    if ($previous_newsobject!=null) {
+      return $previous_newsobject;
+    }
+    $most_recent_newsobject = NewsObject
+      ::orderBy('newsdate', 'desc')
+      ->first();
+    return $most_recent_newsobject;
+  }
+
+  public function get_previous_or_last_routeurl_as_array() {
+    $previous_or_last = $this->get_previous_newsobject_or_last();
+    if ($previous_or_last==null) {
+      /*
+        Well, weird as this if is, at least $this exists,
+        use itself in this 'weird' logical case
+        (this if will probably never occur because if DB is empty,
+        $this also does not exist)
+      */
+      return $this->routeurl_as_array;
+    }
+    return $previous_or_last->routeurl_as_array;
+  }
+
+  public function get_next_newsobject_or_first() {
+    $next_newsobject = NewsObject
+      ::where('newsdate', '>', $this->newsdate)
+      ->orderBy('newsdate', 'asc')
+      ->first();
+    if ($next_newsobject!=null) {
+      return $next_newsobject;
+    }
+    $oldest_newsobject = NewsObject
+      ::orderBy('newsdate', 'asc')
+      ->first();
+    return $oldest_newsobject;
+  }
+
+
+  public function get_next_or_first_routeurl_as_array() {
+    $next_or_first = $this->get_next_newsobject_or_first();
+    if ($next_or_first==null) {
+      /*
+        Well, weird as this if is, at least $this exists,
+        use itself in this 'weird' logical case
+        (this if will probably never occur because if DB is empty,
+        $this also does not exist)
+      */
+      return $this->routeurl_as_array;
+    }
+    return $next_or_first->routeurl_as_array;
   }
 
   // attribute sabdircursos means that some courses are related to news object

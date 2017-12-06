@@ -88,19 +88,23 @@ class NoticiasController extends Controller {
   }
 
   public function list_news_for_month($year=null, $month=null) {
-    $refdate = null;
     if ($year==null || $month==null) {
-      $refdate = Carbon::today();
-    } else {
-      $refdatestr = "$year-$month-01";
-      $refdate = new Carbon($refdatestr);
+      //$refdate = Carbon::today();
+      $newsobjects = self::paginate(10);
+      return redirect()->route('entranceroute')->with(['newsobjects'=>$newsobjects]);
     }
+    $refdatestr = "$year-$month-01";
+    $refdate = new Carbon($refdatestr);
     $nextmonthdate = $refdate->copy()->addMonths(1);
     $previousmonthlastdaydate = $refdate->copy()->addDays(-1);
     $newsobjects = NewsObject
       ::where('newsdate', '<', $nextmonthdate)
       ->where('newsdate', '>', $previousmonthlastdaydate)
       ->paginate(10);
+    if (count($newsobjects)==0) {
+      $newsobjects = NewsObject::paginate(10);
+      return redirect()->route('entranceroute')->with(['newsobjects'=>$newsobjects]);
+    }
     return view('entrance', [
       'newsobjects' => $newsobjects,
     ]);

@@ -14,12 +14,12 @@
 use App\Http\Controllers\NoticiasController;
 
 Route::get('/', [
-  'as' => 'entrance',
+  'as' => 'entranceroute',
   'uses' => 'NoticiasController@mount_newslisting_for_entrance',
 ]);
 
 Route::get('/{year}/{month}/{day}/{underlined_newstitle}', [
-  'as' => 'newsobjroute',
+  'as' => 'newsobjectroute',
   'uses' => 'NoticiasController@show_newspage',
 ]);
 
