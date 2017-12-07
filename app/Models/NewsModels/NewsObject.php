@@ -33,6 +33,21 @@ class NewsObject extends Model {
     return $news_object;
   }
 
+  public static function count_total_newspieces_in_month($p_carbondate) {
+    if ($p_carbondate==null) {
+      $carbondate = Carbon::today();
+    } else {
+      $carbondate = $p_carbondate->copy();
+    }
+    $carbondate->day = 1;
+    $carbondate_monthbefore = $carbondate->copy()->addDays(-1);
+    $carbondate_monthafter  = $carbondate->copy()->addMonth(1);
+    return self
+      ::where('newsdate', '>', $carbondate_monthbefore)
+      ->where('newsdate', '<', $carbondate_monthafter)
+      ->count();
+  }
+
   protected $table   = 'newsobjects';
   protected $dates   = ['newsdate'];
   protected $appends = [

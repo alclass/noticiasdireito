@@ -18,24 +18,29 @@ class MonthObject {
     'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro',
   ];
 
-  public static function make_monthobjs_as_collectof($n_previous_months=1, $refdate=null) {
-    if ($refdate==null) {
+  public static function make_monthobjs_as_collectof($n_previous_months=1, $p_refdate=null) {
+    if ($p_refdate==null) {
       $refdate = Carbon::today();
+    } else {
+      $refdate = $p_refdate->copy();
     }
     $months_as_collect = collect();
     for ($i=0; $i < $n_previous_months; $i++) {
-      if ($i>0) {
-        $refdate->addMonths(-$i);
-      }
+      // echo "i=$i date=$refdate->month";
       $monthcarbon = $refdate->copy();
       $monthobj = new self($monthcarbon);
       $months_as_collect->push($monthobj);
+      $refdate->addMonths(-1);
     }
     return $months_as_collect;
   }
 
   public function __construct($carbondate) {
+    if ($carbondate==null) {
+      $carbondate = Carbon::today();
+    }
     $this->carbondate = $carbondate;
+    $this->total_newspieces = NewsObject::count_total_newspieces_in_month($carbondate);
   }
 
   public function getMonthstrAttribute() {
@@ -60,4 +65,4 @@ class MonthObject {
     }
   }
 
-} // ends class
+} // ends class MonthObject

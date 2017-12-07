@@ -124,7 +124,14 @@
             <h4>Arquivo</h4>
             <ol class="list-unstyled">
               @foreach ($news_obj->get_previous_months_as_objs() as $monthobj)
-                <li><a href="{{ route('newspermonthroute', $monthobj->routeurl_as_array) }}">{{ $monthobj->monthstr }}</a></li>
+                <li>
+                  <a href="{{ route('newspermonthroute', $monthobj->routeurl_as_array) }}">
+                    {{ $monthobj->monthstr }}
+                  </a>
+                  <span style="font-size:small">
+                    ({{ $monthobj->total_newspieces }})
+                  </span>
+                </li>
               @endforeach
             </ol>
           </div>
@@ -132,8 +139,8 @@
             <h4>Portais</h4>
             <ol class="list-unstyled">
               <li><a href="//saberdireitodois.direito.win">Saber Direito Dois</a></li>
-              <li><a href="//direito.science"></a>Direito dot Science</li>
-              <li><a href="//direito.win"></a>Direito dot Win</li>
+              <li><a href="//direito.science">Direito dot Science</a></li>
+              <li><a href="//direito.win">Direito dot Win</a></li>
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->

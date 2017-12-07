@@ -28,3 +28,8 @@ Route::get('/{year}/{month}', [
   'as' => 'newspermonthroute',
   'uses' => 'NoticiasController@list_news_for_month',
 ]);
+
+Route::get('/Sitemap.txt', [
+  'as' => 'txtsitemaproute',
+  'uses' => 'SitemapController@gen_dyn_download_txt_sitemap',
+]);

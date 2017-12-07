@@ -115,6 +115,17 @@ class NewsFileToDBLoader {
     }
   } // ends complete_dirtree_sweep()
 
+  private function survey_path_with_year_n_month($year_n_month_path) {
+
+    $passingpath = $this->get_current_abspath($year_n_month_path);
+    echo "passingpath $passingpath";
+    $files = scandir($passingpath);
+    foreach ($files as $filename) {
+      $filepath = $passingpath . '/' . $filename;
+      $this->look_into_filepath($filepath);
+    }
+  } // ends survey_path_with_year_n_month()
+
   public function load_news_since_n_months_ago($starting_from_n_months_ago=1) {
     $currentdate  = Carbon::now();
     $currentyear  = $currentdate->year;
@@ -126,17 +137,22 @@ class NewsFileToDBLoader {
       $refyear  = $refdate->year;
       $refmonth = $refdate->month;
       $year_n_month_path = "$refyear/$refmonth";
-      $passingpath = $this->get_current_abspath($year_n_month_path);
-      echo "passingpath $passingpath";
-      $files = scandir($passingpath);
-      foreach ($files as $filename) {
-        $filepath = $passingpath . '/' . $filename;
-        $this->look_into_filepath($filepath);
-      }
+      $this->survey_path_with_year_n_month($year_n_month_path);
       $refdate->addMonths(1);
     }
-
   } // ends load_news_since_n_months_ago()
+
+  public function load_news_for_month($refmonth=null, $refyear=null) {
+    $today = Carbon::today();
+    if ($refyear==null) {
+      $refyear = $today->year;
+    }
+    if ($refmonth==null) {
+      $refmonth = $today->month;
+    }
+    $year_n_month_path = "$refyear/$refmonth";
+    $this->survey_path_with_year_n_month($year_n_month_path);
+  } // ends load_news_for_month()
 
   public function load_news_having_date($p_datestr=null) {
     if ($p_datestr==null) {
@@ -163,9 +179,10 @@ class NewsFileToDBLoader {
 
 } // ends class NewsFileToDBLoader
 
-
+/*
 if (php_sapi_name()=='cli') {
   $loader = new NewsFileToDBLoader();
   echo 'Executing method load_news_since_n_months_ago(1)' . "\n";
   $loader->load_news_since_n_months_ago(1);
 }
+*/

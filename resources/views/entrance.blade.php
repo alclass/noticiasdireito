@@ -33,15 +33,17 @@
     @foreach ($newsobjects as $news_obj)
     <div class="col-xs-12 article-wrapper">
       <article>
-        <a href="{{ route('newsobjectroute', $news_obj->routeurl_as_array) }}" class="more">Acessar</a>
         <h1>{{ $news_obj->newstitle }}</h1>
         <p>{{ $news_obj->newsdate->format('d/m/Y') }}</p>
         <p>
           {{ $news_obj->description }}
           <br>
-          <a href="{{ route('newsobjectroute', $news_obj->routeurl_as_array) }}">
+          <div style="text-align:center">
+          <a href="{{ route('newsobjectroute', $news_obj->routeurl_as_array) }}"
+             class="more">
             Acessar
           </a>
+        </div>
         </p>
         <div class="img-wrapper"><img src="https://i.pinimg.com/236x/32/01/6c/32016c4943083f05377f8cb3d2900f2f--lady-justice-tattoo-inspiration.jpg"
            alt="Direito Imagem"
