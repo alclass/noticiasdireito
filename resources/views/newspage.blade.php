@@ -72,10 +72,28 @@
 
           <div align="center">
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="{{ route('newsobjectroute', $news_obj->get_previous_or_last_routeurl_as_array()) }}">Anterior</a>
-            <a class="btn btn-outline-primary {{ (0==1?'disabled':'') }}" href="{{ route('newsobjectroute', $news_obj->get_next_or_first_routeurl_as_array()) }}">Próxima</a>
+            <a class="btn btn-outline-primary"
+              href="{{ route('newsobjectroute', $news_obj->get_previous_or_last_routeurl_as_array()) }}">
+              Notícia
+              <br>
+              Anterior
+            </a>
+            <i class="fa fa-rotate-left"></i>
+            <i class="fa fa-align-justify"></i>
+            <i class="fa fa-rotate-right"></i>
+            <a class="btn btn-outline-primary {{ (0==1?'disabled':'') }}"
+              href="{{ route('newsobjectroute', $news_obj->get_next_or_first_routeurl_as_array()) }}">
+              Próxima
+              <br>
+              Notícia
+            </a>
           </nav>
           </div>
+<hr>
+
+<p style="font-size:small">
+  Google Ads
+</p>
 
 <p>
           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -103,7 +121,7 @@
             <br>
             @foreach($news_obj->sabdircursos as $curso)
             <p>
-              {{ $loop->iteration }} -
+              {{ $loop->iteration }})
               <a href="{{ $news_obj->gen_outer_url_for_course($curso) }}">
                 {{ $curso->title }}
               </a>
