@@ -1,2 +1,2 @@
 User-agent: *
-Disallow:
+Sitemap: http://noticias.direito.science/Sitemap.txt
