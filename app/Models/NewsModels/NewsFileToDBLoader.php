@@ -119,6 +119,9 @@ class NewsFileToDBLoader {
 
     $passingpath = $this->get_current_abspath($year_n_month_path);
     echo "passingpath $passingpath";
+    if (!is_dir($passingpath)) {
+      return;
+    }
     $files = scandir($passingpath);
     foreach ($files as $filename) {
       $filepath = $passingpath . '/' . $filename;
@@ -126,17 +129,26 @@ class NewsFileToDBLoader {
     }
   } // ends survey_path_with_year_n_month()
 
+  private function form_year_n_month_path($refdate) {
+    $refyear  = $refdate->year;
+    $refmonth = $refdate->month;
+    $monthstr = strval($refmonth);
+    if (strlen($monthstr) < 2) {
+      $monthstr = "0$monthstr";
+    }
+    $year_n_month_path = "$refyear/$refmonth";
+    return $year_n_month_path;
+  } // ends form_year_n_month_path()
+
   public function load_news_since_n_months_ago($starting_from_n_months_ago=1) {
     $currentdate  = Carbon::now();
     $currentyear  = $currentdate->year;
     $currentmonth = $currentdate->month;
     $refdate = $currentdate->copy()->addMonths(-$starting_from_n_months_ago);
-    $refyear  = $refdate->year;
-    $refmonth = $refdate->month;
+    // $refyear  = $refdate->year;
+    // $refmonth = $refdate->month;
     while($refdate <= $currentdate) {
-      $refyear  = $refdate->year;
-      $refmonth = $refdate->month;
-      $year_n_month_path = "$refyear/$refmonth";
+      $year_n_month_path = $this->form_year_n_month_path($refdate);
       $this->survey_path_with_year_n_month($year_n_month_path);
       $refdate->addMonths(1);
     }
@@ -150,7 +162,11 @@ class NewsFileToDBLoader {
     if ($refmonth==null) {
       $refmonth = $today->month;
     }
-    $year_n_month_path = "$refyear/$refmonth";
+    $refmonthstr = strval($refmonth);
+    if (strlen($refmonthstr) < 2) {
+      $refmonthstr = "0$refmonthstr";
+    }
+    $year_n_month_path = "$refyear/$refmonthstr";
     $this->survey_path_with_year_n_month($year_n_month_path);
   } // ends load_news_for_month()
 
