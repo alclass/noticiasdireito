@@ -190,6 +190,7 @@
             <p>O Notícias <em>Direito dot Science</em> traz assuntos pontuais e de repercussão no mundo sociojurídico.</p>
           </div>
           <div class="sidebar-module">
+            <hr>
             <h4>Arquivo</h4>
             <ol class="list-unstyled">
               @foreach ($news_obj->get_previous_months_as_objs() as $monthobj)
@@ -202,9 +203,20 @@
                   </span>
                 </li>
               @endforeach
+              <hr>
+              <li>
+                <a href="{{ route('entranceroute') }}">
+                  Todas
+                </a>
+                <span style="font-size:small">
+                  ({{ $news_obj->total_de_noticias }})
+                </span>
+              </li>
+
             </ol>
           </div>
           <div class="sidebar-module">
+            <hr>
             <h4>Portais</h4>
             <ol class="list-unstyled">
               <li><a href="//saberdireitodois.direito.win">Saber Direito Dois</a></li>

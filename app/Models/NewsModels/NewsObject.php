@@ -51,7 +51,7 @@ class NewsObject extends Model {
   protected $table   = 'newsobjects';
   protected $dates   = ['newsdate'];
   protected $appends = [
-    'htmlnewspiece', 'routeurl_as_array'
+    'htmlnewspiece', 'routeurl_as_array', 'total_de_noticias',
   ];
 
   public function getRouteurlAsArrayAttribute() {
@@ -74,6 +74,9 @@ class NewsObject extends Model {
     // [4th elem] underlined_newstitle
     $routeurl_as_array[] = $this->underlined_newstitle;
     return $routeurl_as_array;
+  }
+  public function getTotalDeNoticiasAttribute() {
+    return self::count();
   }
 
   public function getHtmlnewspieceAttribute() {

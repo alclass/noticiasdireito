@@ -1,7 +1,9 @@
 
-### O presidente estadunidense, na quarta-feira dia 6 de Dezembro, 2017, oficializou o reconhecimento de Jerusalém como capital de Israel. Dois dias depois, na Sexta-feira dia 8, peticionada por oito países: Bolívia, Egito, França, Itália, Senegal, Suécia, Reino Unido e Uruguai, ocorre uma reunião de emergência do Conselho de Segurança. Mas a situação diplomática é ainda pior.
+#### O presidente estadunidense, na quarta-feira dia 6 de Dezembro, 2017, oficializou o reconhecimento de Jerusalém como capital de Israel. 
 
-Em curso de graduação em Direito, é comum dividir o Direito Internacional em duas disciplinas principais, uma: Direito Internacional Público, a outra: Direito Internacional Privado. O episódio do reconhecimento de Jerusalém como capital de Israel, pelo presidente estadunidense, é um assunto de interesse direto e imediato do Direito Internacional Público.
+##### Dois dias depois, na Sexta-feira dia 8, peticionada por oito países: Bolívia, Egito, França, Itália, Senegal, Suécia, Reino Unido e Uruguai, ocorre uma reunião de emergência do Conselho de Segurança. _Mas a situação diplomática é ainda pior_.
+
+Em um curso de graduação em Direito, em geral, é comum dividir o Direito Internacional em duas disciplinas principais, uma: Direito Internacional Público, a outra: Direito Internacional Privado. O episódio do reconhecimento de Jerusalém como capital de Israel, pelo presidente estadunidense, é um assunto de interesse direto e imediato do Direito Internacional Público.
 
 No Direito Internacional Público, existe uma forte ideia subjacente na qual as nações buscam integrar-se entre si em prol do crescimento econômico, da melhoria das condições de vida das populações, da busca e do mantenimento do que chamamos: _Estado Democrático de Direito_ e, principalmente, da *paz entre os povos*.
 
