@@ -116,6 +116,9 @@
   <br>
 </p>
 
+<br>
+<hr>
+<br>
           <div class="blog-post">
             <h3 class="blog-post-title">Videocursos relacionados do
                 <a href="{{ $news_obj->get_sabdirdois_root_url() }}">
@@ -123,14 +126,35 @@
                 </a>
             </h3>
             <br>
-            @foreach($news_obj->sabdircursos as $curso)
-            <p>
-              {{ $loop->iteration }})
-              <a href="{{ $news_obj->gen_outer_url_for_course($curso) }}">
-                {{ $curso->title }}
-              </a>
-            </p>
-            @endforeach
+<table>
+  <col width="10%">
+  <col width="4%">
+  <col width="2%">
+  <col width="12%">
+  <col width="2%">
+  <col width="70%">
+    @foreach($news_obj->sabdircursos as $curso)
+    <tr>
+      <td></td>
+      <td>
+        {{ $loop->iteration }}º)
+      </td>
+      <td></td>
+      <td>
+        <img src="{{ $curso->get_ytvideothumbnailurl_via_1stprof_by_size() }}"
+        height="70"
+        width="100"
+        alt="Foto-estúdio do curso">
+      </td>
+      <td></td>
+      <td>
+        <a href="{{ $news_obj->gen_outer_url_for_course($curso) }}">
+          {{ $curso->title }}
+        </a>
+      </td>
+    </tr>
+    @endforeach
+</table>
           </div><!-- /.blog-post -->
 
 <hr>
@@ -140,8 +164,8 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = {{ route('newsobjectroute', $news_obj->routeurl_as_array) }};  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = {{ $news_obj->gen_uniqueid_for_disqus_et_al() }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "{{ route('newsobjectroute', $news_obj->routeurl_as_array) }}";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "{{ $news_obj->gen_uniqueid_for_disqus_et_al() }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
   (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
