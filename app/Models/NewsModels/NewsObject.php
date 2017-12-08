@@ -109,6 +109,17 @@ class NewsObject extends Model {
     return false;
   }
 
+  public function gen_uniqueid_for_disqus_et_al() {
+    /*
+        routeurl_as_array is [$year, $month2charstr, $day2charstr, $underlined_newstitle]
+          E.g. [2017, '12', '08', 'uma_nova_ideia_juridica']
+        The result will be:
+          '2017-12-08-uma_nova_ideia_juridica'
+
+    */
+    return implode('-', $this->routeurl_as_array);
+  }
+
   public function gen_outer_url_for_course($curso, $protocol='http') {
     return UtilParamsForNewsApp::gen_outer_url_for_course($curso, $protocol);
   } // ends gen_outer_url_for_course()
