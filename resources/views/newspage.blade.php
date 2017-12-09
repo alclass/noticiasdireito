@@ -22,8 +22,7 @@
   <div class="blog-masthead">
       <div class="container">
         <nav class="nav blog-nav">
-          <a class="nav-link active" href="{{ URL::to('/') }}">Entrada</a>
-          <a class="nav-link" href="{{ URL::to('/') }}">Atualidades</a>
+          <a class="nav-link active" href="{{ URL::to('/') }}">Notícias Recentes</a>
           <a class="nav-link" href="//saberdireitodois.direito.win/cursos">Videocursos</a>
           <a class="nav-link" href="//saberdireitodois.direito.win/sobre">Sobre</a>
         </nav>
@@ -32,14 +31,46 @@
 
     <div class="blog-header">
       <div class="container">
-        <h1 class="blog-title">Notícias
+
+        <div class="row">
+
+          <div class="col-sm-2">
+            <img src="https://i.pinimg.com/236x/32/01/6c/32016c4943083f05377f8cb3d2900f2f--lady-justice-tattoo-inspiration.jpg"
+              alt="Imagem-ícone que representa a Justiça e o Direito com a Deusa Vendada com uma espada"
+              height="200" width="100" />
+          </div>
+
+            <div class="col-sm-7">
+        <h1 class="blog-title">
+          <br>
+          Notícias
              <a href="{{ URL::to('/') }}">
               Direito.Science
             </a>
         </h1>
-        <p class="lead blog-description">Assuntos sociojurídicos contemporâneos</p>
+        <p class="lead blog-description">
+          Assuntos sociojurídicos contemporâneos
+        </p>
+
       </div>
+
+
+
+      <div class="col-sm-2">
+
+        <p style="font-size:small">O Portal
+          <br>
+          Notícias <em>Direito
+          <br>
+          dot Science</em>
+          <br>
+          traz assuntos atuais, pontuais e de repercussão no mundo sociojurídico.
+        </p>
+      </div>
+
     </div>
+  </div>
+</div>
 
     <p>
       <br>
@@ -54,12 +85,21 @@
 
           <div class="blog-post">
             <h2 class="blog-post-title">{{ $news_obj->newstitle }}</h2>
-            <p class="blog-post-meta">Postagem: {{ $news_obj->newsdate->format('d/m/Y') }}</p>
+            <p class="blog-post-meta">
+              Postagem:
+              <em><b>
+                {{ $news_obj->newsdate->format('d/m/Y') }}
+              </em></b>
+            </p>
+            <hr>
             <p>
               {{ $news_obj->subtitle }}
             </p>
             <p>
-              Descrição: {{ $news_obj->description }}
+              <b><em>Descrição:</em></b>
+            </p>
+            <p>
+              {{ $news_obj->description }}
             </p>
 
             <hr>
@@ -69,9 +109,16 @@
           <p>
             <br>
             <a class="btn btn-outline-primary"
+              href="#disqus_comments">
+              Comentar | Discutir esta notícia
+            </a>
+            <!--a class="btn btn-outline-primary"
               href="#disqus_thread">
               Comentar
-            </a>
+            </a-->
+          </p>
+          <p>
+            <br>
           </p>
 
           <div align="center">
@@ -159,7 +206,11 @@
 
 <hr>
   <p style="font-size:small">
-    Sistema Disqus para Discussão e Comentários
+    Sistema
+    <a name="disqus_comments">
+      Disqus
+    </a>
+    para Discussão e Comentários
   </p>
   <div id="disqus_thread"></div>
   <script>
@@ -185,10 +236,13 @@
 
 
         <div class="col-sm-3 offset-sm-1 blog-sidebar">
+
           <div class="sidebar-module sidebar-module-inset">
-            <h4>Proposta</h4>
-            <p>O Notícias <em>Direito dot Science</em> traz assuntos pontuais e de repercussão no mundo sociojurídico.</p>
+
+
+
           </div>
+
           <div class="sidebar-module">
             <hr>
             <h4>Arquivo</h4>

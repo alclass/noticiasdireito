@@ -45,9 +45,11 @@
           </a>
         </div>
         </p>
-        <div class="img-wrapper"><img src="https://i.pinimg.com/236x/32/01/6c/32016c4943083f05377f8cb3d2900f2f--lady-justice-tattoo-inspiration.jpg"
-           alt="Direito Imagem"
-           height="200" width="100" /></div>
+        <div class="img-wrapper">
+          <img src="https://i.pinimg.com/236x/32/01/6c/32016c4943083f05377f8cb3d2900f2f--lady-justice-tattoo-inspiration.jpg"
+            alt="Imagem-ícone que representa a Justiça e o Direito com a Deusa Vendada com uma espada"
+            height="200" width="100" />
+        </div>
       </article>
     </div>
     @endforeach
