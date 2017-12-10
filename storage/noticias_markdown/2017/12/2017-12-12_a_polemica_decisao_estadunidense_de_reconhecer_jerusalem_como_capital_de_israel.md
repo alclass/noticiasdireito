@@ -35,6 +35,6 @@ Mais informações:
 https://g1.globo.com/mundo/noticia/conselho-de-seguranca-da-onu-faz-reuniao-de-emergencia-sobre-jerusalem.ghtml
 
 
-2) Reportagem online do Washing Post, em Inglês, sobre revoltas de rua na faixa de Gaza:
+2) Reportagem online do Washington Post, em Inglês, sobre revoltas de rua na faixa de Gaza:
 
 https://www.washingtonpost.com/world/middle_east/palestinians-vent-their-fury-on-day-of-rage-against-trumps-jerusalem-move/2017/12/08/b89bed3a-db96-11e7-a241-0848315642d0_story.html?hpid=hp_hp-more-top-stories_jerusalem-355am%3Ahomepage%2Fstory&utm_term=.0765f67c26d3

@@ -7,12 +7,6 @@ A princípio, a operação policial noticiada, batizada *Esperança Equilibrista
 
 Quão espinhoso tornou-se este assunto?  Será que a classe docente das universidades federais não possui uma preocupação maior com as questões do zelo e da administração pública transparente e acima de qualquer dúvida ou suspeita? Afinal, refletimos, as duas questões, quais sejam, a questão de um possível abuso da Polícia Federal e a questão do zelar pelo _Bem Público_ -- e para não só dizer meramente _Bem Público_, a Universidade Pública carrega em si algo de _sacrossanto_ em sua função social --, as duas questões, embora díspares ou antagônicas em si, são certamente duas grandes questões.
 
-Dessa base antagônica, vive ainda o país a onda da Lava-Jato, a renomada e mega operação jurídico-policial que nasceu, _quase sem querer_, descobriu, desvendou, desenrolou um enorme carretel de corrupção passiva e ativa, em propinas contratuais, troca espúrias de favores e prováveis outras conspirações, tudo isso, inicialmente, na Petrobras.
-
-Daí, o impulso Lava-Jato ecoou em outras áreas da Sociedade e, no episódio desta recente notícia nacional, percebe-se que condutas e contratos em universidades públicas ganharam o foco investigativo e agora estão também sob suspeita.
-
-Não obstante, malgrado essas dificuldades que o jornalismo político nos traz, no que tange às questões sociojurídicas que podem ferir a imagem de professores doutores que possuem renome, por que a classe docente, tão veementemente, repudia as ações investigativas, se ela, ao mesmo tempo, justamente declara não ter conhecimento algum se possíveis desmandos tenham ou não ocorrido?  Ou não é obrigação nenhuma da classe docente conhecer, fiscalizar, conferir e pedir a transparência daquilo que é, como indicamos acima, _sacrossantamente_ público, o *bem público* para o _bem público_.
-
 Faremos a continuação deste raciocínio no próximo artigo.
 
 Mais informações:

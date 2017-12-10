@@ -1,5 +1,11 @@
 
-### Neste artigo, tomamos do ponto em que finalizamos o texto anterior.
+### Neste artigo, retomamos do ponto em que finalizamos o texto anterior.
+
+Dessa base antagônica, vive ainda o país a onda da Lava-Jato, a renomada e mega operação jurídico-policial que nasceu, _quase sem querer_, descobriu, desvendou, desenrolou um enorme carretel de corrupção passiva e ativa, em propinas contratuais, troca espúrias de favores e prováveis outras conspirações, tudo isso, inicialmente, na Petrobras.
+
+Daí, o impulso Lava-Jato ecoou em outras áreas da Sociedade e, no episódio desta recente notícia nacional, percebe-se que condutas e contratos em universidades públicas ganharam o foco investigativo e agora estão também sob suspeita.
+
+Não obstante, malgrado essas dificuldades que o jornalismo político nos traz, no que tange às questões sociojurídicas que podem ferir a imagem de professores doutores que possuem renome, por que a classe docente, tão veementemente, repudia as ações investigativas, se ela, ao mesmo tempo, justamente declara não ter conhecimento algum se possíveis desmandos tenham ou não ocorrido?  Ou não é obrigação nenhuma da classe docente conhecer, fiscalizar, conferir e pedir a transparência daquilo que é, como indicamos acima, _sacrossantamente_ público, o *bem público* para o _bem público_.
 
 Argumentávamos que os docentes universitários terminaram transparecendo mais em emitir o repúdio da condução coercitiva do que em conhecer, com esforço, suor, dedicação e transparência, se as finanças e os contratos das universidades e das fundações a elas atreladas estão em boa condução e dentro do rigor da Lei.  Longe de ser esta tarefa fácil, ela é certamente dificílima, mas o professor universitário, para nós, não pode fugir deste encontro, a Universidade é muito maior que todos nós, há que haver este esforço e compromisso.
 
@@ -11,17 +17,6 @@ Mas, como argumentávamos no artigo anterior, a polícia também não pode sair 
 2. a decisão do STF sobre a _proibição do uso de algemas_, para conduzidos que não ofereçam riscos aos condutores e
 3. o *Princípio da Presunção da Inocência* e, em matérias penais, a inversão do ônus da prova ao acusador.
 
-Além disso, as forças do Estado não podem meramente invadir a casa, apreender objetos ou documentação e violar sigilo de comunicação sem peticioná-los ao judiciário com justificativa plausível ao tamanho das medidas peticionadas.
-
-Esta é certamente uma seara espinhosa, pois há situações em particular em que certos padrões do passado, a exemplo da prova de gravação às escondidas, já sejam entendidos diferentemente no cotidiano, como o caso que ficou conhecido da gravação de conversa do empresário Joesley Batista com o presidente Michel Temer.  Tais provas não são mais _tão podres_, como talvez seriam em momentos anteriores no oscilar dos entendimentos sobre as validades de provas pelos tribunais superiores.
-
-Aparentemente e sobre um primeiro plano, a condução coercitiva de um reitor universitário não parece pertencer aos melhores padrões da justiça penal em sentido amplo. Infelizmente -- e este é um ponto para novas e essenciais reflexões --, pouco existe para desencorajar o agente policial público a agir da forma dos menores padrões e expectativas.  Há algo de certo a __inovar__ aqui.
-
-Contudo, há um outro lado dessa história que também precisa ser explorado.  Os professores universitários tendem a fazer a defesa da classe, numa espécie de corporativismo de altas proporções e, ao mesmo tempo, muito muito estranhamente, eles mesmos reconhecem que não sabem o que se passa no interior da administração das autarquias -- as universidades são autarquias -- e, em complemento, das fundações ligadas às universidades públicas. É lógico que não se quer generalizar aqui, mas tal cultura corporativista precisa ser trocada por uma nova consciência, que preze o zelo e os mais altos ideais do moralidade pública que, também, contamine a todos no bom sentido do termo. __Um novo Brasil daí nascerá__.
-
-Enfim, a Universidade Pública e Gratuita tem o maior dos deveres, do lado de dentro, de garantir que nada desonesto, espúrio e corrupto, lá dentro aconteça, pois, de outra forma, não haveria medida para o enorme mal exemplo e efeito dominó do mal cometido, dado que a *Universidade Pública e Gratuita* é, com toda a força da expressão, o __templo sagrado maior__ da *Educação*.
-
-Certamente a forma que a Polícia Federal usou é lamentável e deve haver reparo, mas todos os esforços têm que feitos para que toda a Sociedade tenha toda a transparência de que nada desonesto, espúrio ou corrupto tenha ocorrido dentro da Universidade Pública e, caso tenha, a correção seja _rápida_, _pronta_ e _dentro da Lei_.
 
 Mais informações:
 -----------------
