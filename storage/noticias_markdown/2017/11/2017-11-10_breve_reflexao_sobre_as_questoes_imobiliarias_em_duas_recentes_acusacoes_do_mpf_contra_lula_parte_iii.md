@@ -1,28 +1,32 @@
 
-##### Nos artigos anteriores, iniciamos uma reflexão em torno de uma lógica por via do Direito Imobiliário que pacificaria a questão da propriedade do triplex no Guarujá e, neste artigo, à tona virá a questão da propriedade por meio de propina do apartamento vizinho à moradia da família Lula em São Bernardo.
+##### Nos artigos anteriores, preparamos o caminho para uma reflexão em torno de uma lógica por via do Direito Imobiliário que pacifica, a nosso ver, a questão da propriedade do triplex no Guarujá.
 
-###### Assim, continuemos esta terceira parte que dirimirá a questão do 'apartamento vizinho'.
+###### Assim, continuemos esta terceira parte que dirimirá a questão do 'triplex'.
 
-No artigo anterior, argumentamos que a questão do triplex do Guarujá se pacificava no tempo em que o O.A.S. hipotecara o imóvel, evento após o momento em que a acusação afirmava a condição de _proprietário de fato_ do triplex pelo ex-presidente Lula.
+Na confusão da trama -- e esta trama do triplex é bem confusa, pois nela os acusadores põem conspiração em toda a parte --, a empreitera-construtora O.A.S. hipotecara o imóvel em momento posterior àquele no qual o ex-presidente teria, segundo a própria acusação, se tornado _proprietário de fato_.
 
-No artigo anterior, a tese do _proprietário de fato_ havia, sob a argumentação do conflito entre dois Direitos Reais -- quais sejam, _hipoteca_ e _propriedade_ -- colapsado.
+Desta forma, em reforço, assim como a **propriedade**, a **hipoteca** também é um _Direito Real_. Ou seja, conforme explanamos acima:
 
-Em continuação, neste artigo, trataremos do caso, dezenas de vezes mais simples, que é a acusação de o ex-presidente Lula também ter obtido, por meio de propina, a propriedade do apartamento vizinho à moradia da família Lula em São Bernardo do Campo - SP.
+1. o **Direito Real** de _hipoteca_ é oponível a todos (do Latim: _erga-omnis_);
+2. aquele que tem seu **Direito Real** de _hipoteca_ agredido, possui o direito de sequela, ou seja, o direito de reivindicar o bem onde quer que esteja.
 
-Elenquemos abaixo os fatos que se tornaram conhecidos tanto pela acusação quanto pela defesa:
+Com o objetivo de situar o significado civil de *_hipoteca_*, podemos destacar:
 
-1. o imóvel em tela tem sido usado pelo ex-presidente ao longo tempo, mesmo antes de ele ter se tornado Presidente da República em 2003;
-  - o imóvel teria sido usado em momentos de campanhas eleitorais presidenciais -- e o ex-presidente perdeu várias delas --, momentos em que o locatário era ou o ex-presidente ou o próprio Partido dos Trabalhadores;
-  - o imóvel teria sido usado, após 2003, pela própria _segurança presidencial_, momentos em que o locatário era a própria Administração Pública, ou seja, a própria Presidência da República;
-2. a titularidade do imóvel teria sido transferida numa aquisição após o falecimento do antigo proprietário;
-  - alegara a acusação que o ex-presidente não pagava os aluguéis, logo, o proprietário atual era, pela lógica da acusação, um laranja e o ex-presidente era o _proprietário de fato_;
-  - o ex-presidente, pela lógica da acusação, recebera o imóvel por propina em troca de favores criminosos, em particular, contratos facilitados e superfaturados de empreiteras com a Petrobras;
-  - daí nasceu um novo imbróglio no qual a imprensa tanto explorou, sobre assinaturas falsas de recibos de pagamento de aluguéis que a defesa do ex-presidente juntou posteriormente ao processo;
-3. finalmente, após a defesa ter entregue os recibos de pagamento retromencionados, a parte de acusação fez nova acusação de falsidade ideológica dos recibos, sem gerar prova efetiva de tais alegações.
+- *_hipoteca_* é o Direito Real de garantia, no qual o imóvel gravado será usado como garantia e satisfação no caso de a obrigação subjacente não ser cumprida.
 
-Elencados os fatos acima, embora não tenhamos especificado melhor alguns dos pontos como, p. ex., o de que empreitera teria recebido tal ou qual contrato -- este ponto, por um lado, está fora de nosso escopo e, por outro, alongaria a demais esta série de três artigos --, em nossa opinião, de forma ampla e geral, esta segunda acusação é ainda mais bizarra que a primeira, já desenvolvida nos artigos precedentes a este.
+No artigo anterior, também explicamos que **propriedade** é um _Direito Real_. Em reforço, há, no caso em tela do triplex, dois direitos reais em conflito, quais sejam:
 
-Vejamo-lo à continuação, no próximo artigo.
+1. a **propriedade** (do lado do ex-presidente);
+2. a **hipoteca** (do lado da O.A.S).
+
+Em suma, a questão do triplex do Guarujá se pacificava, nosso argumento, no tempo em que o O.A.S. hipotecara o imóvel, evento após o momento em que a acusação afirmava a condição de _proprietário de fato_ do triplex pelo ex-presidente Lula.
+
+Ora, a situação tornou-se automaticamente resolvida, porque:
+
+1. passou a existir a concorrência entre dois **Direitos Reais**, a propriedade de uma das partes, de um lado, e a hipoteca de uma outra parte, um terceiro contraditório dentro do processo penal, de outro lado;
+2. nesta concorrência entre dois **Direitos Reais**, o _bom senso_ tem que ser chamado à tona. Vejamo-lo.
+
+Vejamos então este proposta _bom senso_, à continuação, no próximo artigo.
 
 
 Mais informações:

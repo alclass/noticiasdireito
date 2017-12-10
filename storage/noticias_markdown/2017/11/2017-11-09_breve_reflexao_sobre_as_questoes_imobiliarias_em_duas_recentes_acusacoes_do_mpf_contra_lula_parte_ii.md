@@ -3,34 +3,24 @@
 
 ###### Assim, é necessário continuar o desenvolvido deste raciocínio.
 
-No artigo anterior, explicamos que **propriedade** é um _Direito Real_.
 
-Desta forma, assim como a **propriedade**, a **hipoteca** também é um _Direito Real_. Ou seja, conforme explanamos acima:
+Com a ressalva justa retroproferida, no artigo anterior, vejamos a _questão imobiliária_ sobre o triplex:
 
-1. o **Direito Real** de _hipoteca_ é oponível a todos (do Latim: _erga-omnis_);
-2. aquele que tem seu **Direito Real** de _hipoteca_ agredido, possui o direito de sequela, ou seja, o direito de reivindicar o bem onde quer que esteja.
+1. o Código Civil estabelece que é proprietário aquele que detém o registro -- a este proprietário, nós o chamaremos de _proprietário de direito_;
+2. não obstante, outras fontes jurídico-normativas podem estabeler algum tipo de fraude ou má-fé nesta situação de proprietário -- a este proprietário, nós o chamaremos de _proprietário de fato_;.
 
-Na confusão da trama -- e esta trama do triplex é bem confusa, pois nela os acusadores põem conspiração em toda a parte --, a empreitera-construtora O.A.S. hipotecou o imóvel em momento posterior àquele no qual o ex-presidente teria, segundo a própria acusação, se tornado _proprietário de fato_.
+Os dois pontos levantados acima começam a desatar o nó. Temos que seguir o raciocínio ainda um pouco mais.
 
-Ora, a situação tornou-se automaticamente resolvida, porque:
+A **propriedade** é, no jargão do Direito, um Direito Real.
 
-1. passou a existir a concorrência entre dois **Direitos Reais**, a propriedade de uma das partes, de um lado, e a hipoteca de uma outra parte, um terceiro contraditório dentro do processo penal, de outro lado;
-2. nesta concorrência entre dois **Direitos Reais**, o bom senso tem que ser chamado à tona. Vejamo-lo.
+Um Direito Real é caracterizado por dois atributos, quais sejam:
 
-O bom senso que tem que ser chamado à tona, por força de um exemplo hipotético, é o seguinte:
+1. o **Direito Real** é oponível a todos (do Latim: _erga-omnis_);
+2. aquele que tem seu **Direito Real** agredido, possui o direito de sequela, ou seja, o direito de reivindicar o bem onde quer que esteja.
 
-- suponha que João seja o _proprietário de fato_ de um triplex no Guarujá;
-- suponha que José, que **não** é o proprietário de fato de tal triplex, hipoteque o imóvel.
+Em geral, os **Direitos Reais** para serem, do ponto de vista prático, oponíveis a todos, têm que possuir alguma forma de registro público. No caso de imóveis, este registro é realizado no Cartório de Imóveis, comumente conhecido como **R.G.I.** -- ié, _Registro Geral de Imóveis_.  Reparemos que acima de um certo valor venal mínimo que é disposto no Código Civil, o registro é obrigatório e uma escritura de compra e venda não garantirá o status de proprietário de um adquirente, ou seja, ele tem que levar a escritura ao **R.G.I.**
 
-_Pergunta-se_: o que acontecerá se a dívida subjacente à hipoteca não for paga? O hipotecário justamente terá o bem em garantia da dívida e João, o _proprietário de fato_, perderá o imóvel.
-
-Esta situação lógica nos força a ter que realizar uma escolha entre a conspiração levada a cabo de qualquer maneira -- que, no fundo, foi o que aconteceu -- ou a ter que verificar que o _proprietária de direito_, a **O.A.S.**, também era _proprietária de fato_, pois usufruía de uma hipoteca e de recursos financeiros que dela dependiam.
-
-Aqui findamos a questão do triplex. Passemos à questão do _imóvel vizinho_.
-
-#### O Imóvel Vizinho à Moradia da Família Lula
-
-O segundo ponto de nossa reflexão é relativo a acusação semelhante sobre o Imóvel Vizinho à Moradia da Família Lula.
+Está certo, a questão que buscamos ainda não está resolvida, mas há um *_detalhe_* no triplex que resolve a questão, a nosso ver, de forma totalmente pacífica. De carona, é desnecessário dizer que o juízo não optou pela visão que daremos à continuação, pois o ex-presidente já se encontra, no momento de escrita, condenado em primeira instância.
 
 À continuação, no próximo artigo em sequência, levaremos adiante esta análise.
 

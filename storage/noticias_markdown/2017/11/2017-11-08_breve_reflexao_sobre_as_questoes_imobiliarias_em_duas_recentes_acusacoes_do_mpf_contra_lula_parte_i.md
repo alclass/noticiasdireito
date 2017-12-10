@@ -15,23 +15,7 @@ Mas, nosso ótica será delineada por uma reflexão daquela que estuda Direito e
 
 #### 1. A Espinhosa Questão do Triplex no Guarujá
 
-Antes de indicarmos nosso _visão imobiliária_ sobre o triplex, devemos lembrar que no Direito Penal o ônus da prova cabe ao acusador. Logo, havendo uma _teoria de conspiração_ que indique que o imóvel pertence a A ou B, a acusação deve prová-lo inequivocamente.
-
-Com a ressalva justa retroproferida, vejamos a _questão imobiliária_ sobre o triplex:
-
-1. o Código Civil estabelece que é proprietário aquele que detém o registro -- a este proprietário, nós o chamaremos de _proprietário de direito_;
-2. não obstante, outras fontes jurídico-normativas podem estabeler algum tipo de fraude ou má-fé nesta situação de proprietário -- a este proprietário, nós o chamaremos de _proprietário de fato_;.
-
-Os dois pontos levantados acima começaram a desatar o nó. Temos que seguir o raciocínio ainda um pouco mais.
-
-A **propriedade** é, no jargão do Direito, um Direito Real.  Um Direito Real é caracterizado por dois atributos, quais sejam:
-
-1. o **Direito Real** é oponível a todos (do Latim: _erga-omnis_);
-2. aquele que tem seu **Direito Real** agredido, possui o direito de sequela, ou seja, o direito de reivindicar o bem onde quer que esteja.
-
-Em geral, os **Direitos Reais**, para serem do ponto de vista prático, oponíveis a todos, têm que possuir alguma forma de registro público. No caso de imóveis, este registro é realizado no Cartório de Imóveis.  Reparemos que acima do valor mínimo que é citado no Código Civil, o registro é obrigatório e uma escritura de compra e venda não garantirá o status de proprietário de um adquirente, ele tem que levar a escritura ao registro de imóveis.
-
-Está certo, a questão deste artigo ainda não está resolvida, mas há um detalhe no triplex que resolve a questão, a nosso ver, de forma totalmente pacífica. De carona, é desnecessário dizer que o juízo não optou pela visão que daremos à continuação.
+Antes de indicarmos nossa _visão imobiliária_ sobre o triplex, devemos lembrar que no Direito Penal o ônus da prova cabe ao acusador. Logo, havendo uma _teoria de conspiração_ que indique que o imóvel pertence a A ou B, a acusação deve prová-lo inequivocamente.
 
 No próximo artigo, daremos continuidade às ideias aqui iniciadas.
 
