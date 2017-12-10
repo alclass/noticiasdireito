@@ -11,11 +11,7 @@ Argumentávamos que os docentes universitários terminaram transparecendo mais e
 
 Mas, como argumentávamos no artigo anterior, a polícia também não pode sair por aí e levando os suspeitos coercitivamente para onde quer que eles queiram levá-los.  O Estado não pode fazer isso -- pelo menos não de qualquer maneira, há regras modernas que elevam o padrão.
 
-É notório que os princípios mais modernos em matéria de jurisdição penal nos remetem a ideias e ideais que prezam valores mais altos para a presunção da inocência e o respeito à dignidade humana -- e aqui pouco importa se a pessoa é rica ou pobre, se é um doutor ou um analfabeto. Em particular, podemos enfatizar os seguintes grandes princípios do Direito, quais sejam:
-
-1. o *Princípio Constitucional* da _Ampla-Defesa_ e do Contraditório;
-2. a decisão do STF sobre a _proibição do uso de algemas_, para conduzidos que não ofereçam riscos aos condutores e
-3. o *Princípio da Presunção da Inocência* e, em matérias penais, a inversão do ônus da prova ao acusador.
+No próximo artigo, à continuação, daremos sequência a este raciocínio.
 
 
 Mais informações:
