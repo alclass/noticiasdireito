@@ -59,6 +59,10 @@ class MonthObject {
   }
 
   public function __get($propertyName) {
+    /*
+      See which words/fields are dynamic attributes
+      on the Class' docstring above
+    */
     $method = 'get' . ucfirst($propertyName) . 'Attribute';
     if (method_exists($this, $method)) {
       return $this->{$method}();

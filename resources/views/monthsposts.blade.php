@@ -12,7 +12,7 @@
 
 @section('css_section')
 <!-- Custom styles for this template -->
-<link rel="stylesheet" href="{{ asset('css/bootstrap_pagination_fragment.css') }}">
+<link href="{{ asset('blogfrombootstrap.css') }}" rel="stylesheet">
 @endsection
 
 @section('bodycontent_section')
@@ -21,7 +21,7 @@
   <div class="blog-masthead">
       <div class="container">
         <nav class="nav blog-nav">
-          <a class="nav-link active" href="{{ URL::to('/') }}">Artigos Recentes</a>
+          <a class="nav-link active" href="{{ URL::to('/') }}">Notícias Recentes</a>
           <a class="nav-link" href="//saberdireitodois.direito.win/cursos">Videocursos</a>
           <a class="nav-link" href="//saberdireitodois.direito.win/sobre">Sobre</a>
         </nav>
@@ -84,75 +84,31 @@
 
         <div class="col-sm-8 blog-main">
 
-
-<?php
-  if (!isset($listing_subtitle) || empty($listing_subtitle)) {
-    $listing_subtitle = 'Todos os Artigos';
-  }
-?>
-
-          <div class="container" align="center">
-            <h4>{{ $listing_subtitle }}</h4>
-            <br>
-            @if ($newsobjects->lastPage() > 1)
-            <h6 style="color:darkblue">
-              Página <b>{{ $newsobjects->currentPage() }}</b> de {{ $newsobjects->lastPage() }} ::
-               Exibindo artigos de <b>{{ $newsobjects->firstItem() }}</b> a {{ $newsobjects->lastItem() }} ::
-               Total: <b>{{ $newsobjects->total() }}</b> artigos
-            </h6>
-            {{ $newsobjects->links() }}
-            @endif
-            <br>
-          </div>
-
-          <?php
-            $items_per_page = $newsobjects->perPage();
-            $current_page = $newsobjects->currentPage();
-          ?>
           @foreach($newsobjects as $news_obj)
-          <?php
-            $n_artigo = $items_per_page * ($current_page - 1) + $loop->iteration;
-          ?>
-          <div class="blog-post" style="text-align:center">
+          <div class="blog-post">
             <hr>
+            <h5 class="blog-post-title">{{ $news_obj->newstitle }}</h5>
             <p class="blog-post-meta">
-              <em>
+              Postagem:
+              <em><b>
                 {{ $news_obj->newsdate->format('d/m/Y') }}
-              </em>
-              <br>
-              <span style="font-size:10px">
-                Artigo <b>{{ $n_artigo }}</b> de <b>{{ $newsobjects->total() }}</b>
-              </span>
+              </em></b>
             </p>
-            <h6 class="blog-post-title">
-              <a href="{{ route('newsobjectroute', $news_obj->routeurl_as_array)}}">
-                {{ $news_obj->newstitle }}
-              </a>
-            </h6>
+            <p style="text-align:center">
+              <b><em>Descrição:</em></b>
+            </p>
+            <p style="font-size:small">
+              {{ $news_obj->description }}
+            </p>
 
           </div><!-- /.blog-post -->
           @endforeach
 
-
-<br>
-
-
-@if ($newsobjects->lastPage() > 1)
-<div class="container" align="center">
-  {{ $newsobjects->links() }}
-  <h6 style="color:darkblue">
-    Página <b>{{ $newsobjects->currentPage() }}</b> de {{ $newsobjects->lastPage() }} ::
-     Exibindo artigos de <b>{{ $newsobjects->firstItem() }}</b> a {{ $newsobjects->lastItem() }} ::
-     Total: <b>{{ $newsobjects->total() }}</b> artigos
-  </h6>
-</div>
-@endif
-
-<br>
 <hr>
 <br>
 
-</div><!-- /.blog-main -->
+        </div><!-- /.blog-main -->
+
         <div class="col-sm-3 offset-sm-1 blog-sidebar">
 
           <div class="sidebar-module sidebar-module-inset">
@@ -200,7 +156,52 @@
 
       </div><!-- /.row -->
 
-<hr>
+
+
+
+
+      <table>
+        <col width="10%">
+        <col width="4%">
+        <col width="2%">
+        <col width="12%">
+        <col width="2%">
+        <col width="70%">
+          @foreach($news_obj->sabdircursos as $curso)
+          <tr>
+            <td></td>
+            <td>
+              {{ $loop->iteration }}º)
+            </td>
+            <td></td>
+            <td>
+              <img src="{{ $curso->get_ytvideothumbnailurl_via_1stprof_by_size() }}"
+              height="70"
+              width="100"
+              alt="Foto-estúdio do curso">
+            </td>
+            <td></td>
+            <td>
+              <a href="{{ $news_obj->gen_outer_url_for_course($curso) }}">
+                {{ $curso->title }}
+              </a>
+            </td>
+          </tr>
+          @endforeach
+      </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <p style="font-size:small">
         Google Ads
@@ -218,54 +219,6 @@
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
       </p>
-<hr>
-
-<h5>
-  Videocursos Recentes do Saber Direito
-</h5>
-
-<table>
-  <col width="4%">
-  <col width="2%">
-  <col width="12%">
-  <col width="2%">
-  <col width="60%">
-  <col width="20%">
-    @foreach($news_obj->get_lastest_n_courses(5) as $curso)
-    <tr style="vertical-align:top">
-      <td></td>
-      <td style="font-size:small">
-      </td>
-      <td>
-        <img src="{{ $curso->get_ytvideothumbnailurl_via_1stprof_by_size() }}"
-        height="70"
-        width="100"
-        alt="Foto-estúdio do curso">
-      </td>
-      <td></td>
-      <td>
-        <a href="{{ $news_obj->gen_outer_url_for_course($curso) }}">
-          {{ $curso->title }}
-        </a>
-        <br>
-        <span style="font-size:11px">
-          Exibição televisiva original de <b>{{ $curso->firstemissiondate->format('d/m/Y') }}</b>
-          a
-          <b>{{ $curso->finishdate->format('d/m/Y') }}</b>
-        <br>
-        </span>
-        <span style="font-size:9px">
-        Armazenado no <em>acervo</em> do
-        <a href="http://saberdireitodois.direito.win">
-          Saber Direito Dois
-        </a>
-        <hr>
-        </span>
-      </td>
-      <td></td>
-    </tr>
-    @endforeach
-</table>
 
 
 
@@ -278,16 +231,8 @@
       <p>
         <a href="#">Voltar ao Topo da Página</a>
       </p>
-      <p style="font-size:10px">
-        <?php
-          $today = $news_obj->today;
-        ?>
-        &copy; 2017-{{ $today->year }}
-        <a href="#">
-          Direito.Science
-        </a>
-      </p>
     </footer>
+
   </div><!-- /.container -->
 
 

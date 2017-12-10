@@ -51,7 +51,8 @@ class NewsObject extends Model {
   protected $table   = 'newsobjects';
   protected $dates   = ['newsdate'];
   protected $appends = [
-    'htmlnewspiece', 'routeurl_as_array', 'total_de_noticias',
+    'htmlnewspiece', 'routeurl_as_array',
+    'today', 'total_de_noticias',
   ];
 
   public function getRouteurlAsArrayAttribute() {
@@ -75,6 +76,11 @@ class NewsObject extends Model {
     $routeurl_as_array[] = $this->underlined_newstitle;
     return $routeurl_as_array;
   }
+
+  public function getTodayAttribute() {
+    return Carbon::today();
+  }
+
   public function getTotalDeNoticiasAttribute() {
     return self::count();
   }
@@ -229,6 +235,16 @@ class NewsObject extends Model {
       return $this->routeurl_as_array;
     }
     return $next_or_first->routeurl_as_array;
+  }
+
+  public function get_lastest_n_courses($lastest_n=3) {
+    $lastest_n = intval($lastest_n);
+    if ($lastest_n < 1) {
+      return null;
+    }
+    return SabDirCurso
+      ::orderBy('firstemissiondate', 'desc')
+      ->take($lastest_n)->get();
   }
 
   // attribute sabdircursos means that some courses are related to news object

@@ -13,19 +13,10 @@ Assim, na *Constituição Brasileira de 1988*, o legislador constituinte não re
 
 Para dirimir a questão, os doutrinadores constitucionalistas nos ensinam que o *STF* então decidiu que a *República*, embora não uma _Cláusula Pétrea_ *explícita* no texto constitucional, deve ser considerada uma _Cláusula Pétrea_ *implícita*.
 
-Mas, eis uma questão espinhosa: não organizou o país em 1993 um Plebiscito, previsto na própria Constituição, para que o povo escolhesse entre República ou Monarquia?
+No próximo artigo, à continuação, buscaremos indagar a razão pela qual:
 
-Ora, se o *STF* entende, por jurisprudência e pelos votos e opiniões de seus ministros, que a República é uma _Cláusula Pétrea_ *implícita*, seria natural indagar: valeria a escolha de 1993 se o povo tivesse escolhido Monarquia?
-
-Eis uma interessantíssima questão, de certo.
-
-O portal [Constituição e Democracia][1] fornece uma explicação temporal para a matéria, qual seja:
-
-<cite>
-  A República é uma cláusula implícita material por expressa decisão do povo, o qual afastou a possibilidade do advento de uma monarquia constitucional no plebiscito mencionado. (...) Perceba-se que, mesmo neste caso, não é uma emenda constitucional quem está alterando a forma de governo.
-</cite>
-
-Pela explicação dada acima, a decisão do *STF* condiciona-se então à decisão do povo -- pela *República* -- no próprio plescito, uma vez que esta escolha, conforme a Constituição permitia, só poderia ocorrer uma vez.
+- o *Ser República*
+- ↝ deve ser considerada uma _Cláusula Pétrea_ *implícita*.
 
 
 Mais informações:

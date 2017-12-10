@@ -12,9 +12,7 @@ A História da Humanidade, sob uma certa _visão sociojurídica_, mostra diverso
 O professor estadunidense de Direito, Joseph L. Hoffmann, com o título de _Harry Pratter Professor of Law at the Indiana
 University Maurer School of Law_, é um dos pensadores modernos que, a nosso ver, desenvolvem o tema da proteção constitucional dos indíviduos perante o Estado, sem que percebamos haver um mundo _common law_ em contraponto a um mundo _civil law_, o primeiro termo usado para o sistema jurídico angloamericano e o segundo, de certa forma, usado para praticamente o resto do mundo, incluindo o Brasil.
 
-Nos ensinamentos do prof. Hoffmann, ele nos parece transmitir sublinhada a ideia de que os pais fundadores dos Estados Unidos, após uma guerra de independência contra um Estado _poderoso_ que era o Reino Unido, desenvolveram ideias que balizavam em fundo o cuidado de se evitar um Estado todo-poderoso que pudesse fazer o que bem quisesse e intendesse com e contra o cidadão, pois, na lucidez da reflexão, eles estavam justamente se livrando do julgo britânico, que fazia, na América, o que bem quisesse e intendesse com e contra o cidadão.
-
-Está certo que grandes conquistas estadunidenses do passado a favor da privacidade, da propriedade privada, das liberdades de expressão, entre outras, têm sido perdidas modernamente. Não obstante, as ideias fulcrais de que o Estado necessita de pedir ao judiciário um _mandado_ para buscar, para pegar ou acessar informação -- pois o Estado sob essa lógica não tem o direito de agir como quiser sem que haja um justificativa e que tal seja plausível --, são certamente um grande marco na concepção de que pode existir, entre o cidadão e o Estado, *freios* e *contrapesos*.
+No próximo artigo, à continuação, daremos direção à aparente ideia de que os pais fundadores dos Estados Unidos se preocupavam com a existência de um Estado muito _poderoso_ e que isto era algo que eles tinham que tentar dar uma solução, pelo menos para a época.
 
 
 Mais informações:

@@ -22,7 +22,7 @@
   <div class="blog-masthead">
       <div class="container">
         <nav class="nav blog-nav">
-          <a class="nav-link active" href="{{ URL::to('/') }}">Notícias Recentes</a>
+          <a class="nav-link active" href="{{ URL::to('/') }}">Artigos Recentes</a>
           <a class="nav-link" href="//saberdireitodois.direito.win/cursos">Videocursos</a>
           <a class="nav-link" href="//saberdireitodois.direito.win/sobre">Sobre</a>
         </nav>
@@ -125,7 +125,7 @@
           <nav class="blog-pagination">
             <a class="btn btn-outline-primary"
               href="{{ route('newsobjectroute', $news_obj->get_previous_or_last_routeurl_as_array()) }}">
-              Notícia
+              Artigo
               <br>
               Anterior
             </a>
@@ -134,9 +134,9 @@
             <i class="fa fa-rotate-right"></i>
             <a class="btn btn-outline-primary {{ (0==1?'disabled':'') }}"
               href="{{ route('newsobjectroute', $news_obj->get_next_or_first_routeurl_as_array()) }}">
-              Próxima
+              Próximo
               <br>
-              Notícia
+              Artigo
             </a>
           </nav>
           </div>
@@ -289,6 +289,15 @@
       <br>
       <p>
         <a href="#">Voltar ao Topo da Página</a>
+      </p>
+      <p style="font-size:10px">
+        <?php
+          $today = $news_obj->today;
+        ?>
+        &copy; 2017-{{ $today->year }}
+        <a href="{{ URL::to('/') }}">
+          Direito.Science
+        </a>
       </p>
     </footer>
 
