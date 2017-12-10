@@ -24,9 +24,9 @@ Também não se pode perder de vista, na integração dos **Direitos**, os press
 3. o da **presunção de inocência** até provado o contrário e, sobretudo,
 4. o da absoluta **inversão do ônus da prova** ao acusador em toda e qualquer matéria criminal.
 
-Em relação ao _in dubio pro reu_ e o _in dubio pro societas_, na parte-artigo anterior, esta é de certo uma interessantíssima questão para quando as questões penais se mesclam com questões estatais que envolvem populações imensas e, sem querer sair do tela, quando crianças, idosos e outros começam a morrer em corredores de hospitais sucateados.
+Em relação ao _in dubio pro reu_ e o _in dubio pro societas_, na parte-artigo anterior, esta é de certo uma interessantíssima questão para quando as questões penais se mesclam com questões estatais que envolvem populações imensas e, sem querer sair do tema, quando crianças, idosos e outros começam a morrer em corredores de hospitais sucateados.
 
-Por isso tudo, num caso de forças complexas, há que se ter **bom senso** e, como expusemos, a **integração** das _diferentes áreas_ do **Direito**. Aqui, neste caso exemplar em tela, _Direitos Reais_ e _Direito Penal_ devem seguir juntos, lado a lado, de mãos dadas.
+Por isso tudo, num caso de forças complexas, há que se ter **bom senso** e, como expusemos, a **integração** das _diferentes áreas_ do **Direito**. Aqui, neste caso exemplar em tela, _Direitos Reais_ e _Direito Penal_ não podem se perder um do outro.
 
 
 Mais informações:
