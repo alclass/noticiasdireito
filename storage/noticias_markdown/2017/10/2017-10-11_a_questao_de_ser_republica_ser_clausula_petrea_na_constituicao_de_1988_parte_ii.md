@@ -1,26 +1,7 @@
 
 ##### No rol de cláusulas pétreas do art. 60 §4º da Constituição Federal de 1988, o legislador constituinte não registrou ser a *República* a forma e modelo político organizacional de governo -- e de sua escolha -- no país. 
 
-###### O STF -- Supremo Tribunal Federal --, enquanto *Guardião da Constituição*, trouxe uma solução para esta, sob certo entendimento, delicada questão.
-
-O portal https://www.significados.com.br em sua página _Significado de República - O que é, Conceito e Definição_, nos fornece a seguinte explanação:
-
-<cite>
-  República é uma palavra que descreve uma forma de governo em que o Chefe de Estado é eleito pelos representantes dos cidadãos ou pelos próprios cidadãos, e exerce a sua função durante um tempo limitado. Esta palavra deriva do latim res publica, expressão que pode ser traduzida como "assunto público".
-</cite>
-
-O portal https://conceito.de em sua página _República_, já nos traz uma definição levemente diferente; vejamo-la:
-
-<cite>
-  Do latim _res publĭca_ (“coisa pública”), a república é uma forma de organização do Estado. Na república, a autoridade máxima cumpre funções durante um tempo determinado e é eleita pelos cidadãos, seja de maneira directa, seja através do Parlamento (cujos integrantes também são eleitos pelo povo).
-</cite>
-
-Com ajuda das duas definições acima -- e sabendo que há mais nuâncias para o termo _República_ --, tiremos por base as seguintes características para a ideia moderna de _República_:
-
-1. É uma _forma de organização_ do *Estado*;
-2. Considera que a autoridade máxima cumpre suas funções _durante um tempo determinado_;
-3. Esta _autoridade máxima_ é *eleita* pelos cidadãos (direta ou indiretamente).
-
+###### Nesta segunda parte, continuamos o desenvolvimento do artigo anterior.
 
 A *Constituição* é, como postula o jusfilósofo _Hans Kelsen_, a _Lei Maior_ de uma nação, situando-se no topo da *Pirâmide das Normas*. Esta _Carta Maior_, como assim também é chamada, pode ser modificada na maior parte, havendo restrição para algumas partes, que foram organizadas para jamais serem modificadas. Essas _imexíveis_ (se nos permitem lembrar o neologismo de um antigo ministro...) cláusulas são chamadas: _Cláusulas Pétreas_.
 
