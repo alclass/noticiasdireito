@@ -33,3 +33,9 @@ Route::get('/Sitemap.txt', [
   'as' => 'txtsitemaproute',
   'uses' => 'SitemapController@gen_dyn_download_txt_sitemap',
 ]);
+
+
+Route::get('feed/{type?}', [
+  'as' => 'feed.atom',
+  'uses' => 'Feed\FeedsController@getFeed'
+]);
