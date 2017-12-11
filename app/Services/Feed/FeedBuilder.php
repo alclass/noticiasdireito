@@ -35,7 +35,7 @@ class FeedBuilder {
         $feed->pubdate = $newsobjects[0]->newsdate;
         foreach ($newsobjects as $news_obj) {
           $routeurl = route('$newsobjectroute', $news_obj->routeurl_as_array);
-          $author = "Direito.Science";
+          $author = "Direito.Science";http://localhost:8000
           // set item's title, author, url, pubdate, description, content, enclosure (optional)*
           $feed->add($news_obj->newstitle, $author, $routeurl, $news_obj->newsdate, '', '');
         }
