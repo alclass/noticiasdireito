@@ -134,31 +134,50 @@ class NoticiasController extends Controller {
     return redirect()->route('entranceroute');
   }
 
+  private function list_news_for_current_month_inprodenv() {
+
+    $today = Carbon::today();
+    $refdate = $today->copy();
+    $refdate->day = 1;
+    $previousmonthlastdaydate = $refdate->copy()->addDays(-1);
+    $n_paginate = self::get_n_paginate();
+    $newsobjects = NewsObject
+      ::where('newsdate', '<=', $today)
+      ->where('newsdate', '>', $previousmonthlastdaydate)
+      ->paginate($n_paginate);
+    $monthobj = new MonthObject($refdate);
+    $listing_subtitle = "Artigos no mês $monthobj->monthstr de $refdate->year";
+    return view('entrance', [
+      'newsobjects'      => $newsobjects,
+      'listing_subtitle' => $listing_subtitle,
+    ]);
+  }
+
   public function list_news_for_month($year=null, $month=null) {
     $n_paginate = self::get_n_paginate();
     if ($year==null || $month==null) {
       //$refdate = Carbon::today();
-      $newsobjects = self::paginate($n_paginate);
-      return redirect()->route('entranceroute')->with(['newsobjects'=>$newsobjects]);
+      return $this->mount_newslisting_for_entrance();
+      // return redirect()->route('entranceroute')->with(['newsobjects'=>$newsobjects]);
     }
     $refdatestr = "$year-$month-01";
     $refdate = new Carbon($refdatestr);
+    $today = Carbon::today();
+    if (\App::environment('production')) {
+      if ($refdate->year == $today->year && $refdate->month == $today->month) {
+        return $this->list_news_for_current_month_inprodenv();
+      }
+    }
     $nextmonthdate = $refdate->copy()->addMonths(1);
     $previousmonthlastdaydate = $refdate->copy()->addDays(-1);
     $newsobjects = NewsObject
       ::where('newsdate', '<', $nextmonthdate)
       ->where('newsdate', '>', $previousmonthlastdaydate)
       ->paginate($n_paginate);
-    /*
-    if (count($newsobjects)==0) {
-      $newsobjects = NewsObject::paginate($n_paginate);
-      return redirect()->route('entranceroute')->with(['newsobjects'=>$newsobjects]);
-    }
-    */
-     $monthobj = new MonthObject($refdate);
-     $listing_subtitle = "Artigos no mês $monthobj->monthstr de $refdate->year";
+    $monthobj = new MonthObject($refdate);
+    $listing_subtitle = "Artigos no mês $monthobj->monthstr de $refdate->year";
     return view('entrance', [
-      'newsobjects' => $newsobjects,
+      'newsobjects'      => $newsobjects,
       'listing_subtitle' => $listing_subtitle,
     ]);
   } // ends list_news_for_month()
