@@ -47,14 +47,14 @@ class NewsObject extends Model {
       ::where('newsdate', '>', $carbondate_monthbefore)
       ->where('newsdate', '<', $carbondate_monthafter)
       ->count();
-    // if (\App::environment('production')) {
+    if (\App::environment('production')) {
       if ($today->year == $carbondate->year && $today->month == $carbondate->month) {
         $total_newspieces_in_month = self
           ::where('newsdate', '>', $carbondate_monthbefore)
           ->where('newsdate', '<=', $today)
           ->count();
       }
-    // }
+    }
     return $total_newspieces_in_month;
   }
 
