@@ -34,6 +34,7 @@ class NewsObject extends Model {
   }
 
   public static function count_total_newspieces_in_month($p_carbondate) {
+    $today = Carbon::today();
     if ($p_carbondate==null) {
       $carbondate = Carbon::today();
     } else {
@@ -42,10 +43,19 @@ class NewsObject extends Model {
     $carbondate->day = 1;
     $carbondate_monthbefore = $carbondate->copy()->addDays(-1);
     $carbondate_monthafter  = $carbondate->copy()->addMonth(1);
-    return self
+    $total_newspieces_in_month = self
       ::where('newsdate', '>', $carbondate_monthbefore)
       ->where('newsdate', '<', $carbondate_monthafter)
       ->count();
+    if ($today < $carbondate_monthafter) {
+      if (\App::environment('production')) {
+        $total_newspieces_in_month = self
+          ::where('newsdate', '>', $carbondate_monthbefore)
+          ->where('newsdate', '<=', $today)
+          ->count();
+      }
+    }
+    return $total_newspieces_in_month;
   }
 
   protected $table   = 'newsobjects';
