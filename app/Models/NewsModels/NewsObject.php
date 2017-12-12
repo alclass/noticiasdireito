@@ -11,6 +11,19 @@ use Illuminate\Database\Eloquent\Model;
 class NewsObject extends Model {
 
   public static function getLastN($n_lastones=3) {
+    $n_lastones = intval($n_lastones);
+    if ($n_lastones<1) {
+      return null;
+    }
+    if (\App::environment('production')) {
+      // production case limits news piece up to today's date
+      $today = Carbon::today();
+      return self
+        ::where('newsdate', '<=', $today)
+        ->orderBy('newsdate', 'desc')
+        ->take($n_lastones)->get();
+    }
+    // non-production cases fall here
     return self::orderBy('newsdate', 'desc')->take($n_lastones)->get();
   }
 
