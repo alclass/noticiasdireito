@@ -47,14 +47,14 @@ class NewsObject extends Model {
       ::where('newsdate', '>', $carbondate_monthbefore)
       ->where('newsdate', '<', $carbondate_monthafter)
       ->count();
-    if (\App::environment('production')) {
+    // if (\App::environment('production')) {
       if ($today->year == $carbondate->year && $today->month == $carbondate->month) {
         $total_newspieces_in_month = self
           ::where('newsdate', '>', $carbondate_monthbefore)
           ->where('newsdate', '<=', $today)
           ->count();
       }
-    }
+    // }
     return $total_newspieces_in_month;
   }
 
@@ -92,7 +92,27 @@ class NewsObject extends Model {
   }
 
   public function getTotalDeNoticiasAttribute() {
-    return self::count();
+    /*
+      Obs.:
+      1) in production, counting is up to today's date,
+        if there are 'future' news pieces,
+        these are not counted.
+      2) in non-production, all news pieces are counted.
+        This is so that we may prepare articles in advance
+        without showing them in production.
+    */
+    if (\App::environment('production')) {
+      // in production
+      $today = Carbon::today();
+      $total_de_noticias = self
+        ::where('newsdate', '<=', $today)
+        ->count();
+    }
+    else {
+      // in non-production
+      $total_de_noticias = self::count();
+    }
+    return $total_de_noticias;
   }
 
   public function getHtmlnewspieceAttribute() {
