@@ -231,9 +231,24 @@ class NewsObject extends Model {
     if ($previous_newsobject!=null) {
       return $previous_newsobject;
     }
-    $most_recent_newsobject = NewsObject
-      ::orderBy('newsdate', 'desc')
-      ->first();
+    /*
+      If code flow gets here, 'this' is already the oldest post and
+      the most recent, in a kind of rotation wheel scheme, is one it searches for
+        obs.1) the most recent in production is bound by $today
+        obs.2) the most recent in non-production is the last one by date,
+                even if it's in the future (posts that are written but not released)
+    */
+    if (\App::environment('production')) {
+      $today = Carbon::today();
+      $most_recent_newsobject = NewsObject
+        ::where('newsdate', '<=', $today)
+        ->orderBy('newsdate', 'desc')
+        ->first();
+    } else {
+      $most_recent_newsobject = NewsObject
+        ::orderBy('newsdate', 'desc')
+        ->first();
+    }
     return $most_recent_newsobject;
   }
 
@@ -252,16 +267,43 @@ class NewsObject extends Model {
   }
 
   public function get_next_newsobject_or_first() {
-    $next_newsobject = NewsObject
-      ::where('newsdate', '>', $this->newsdate)
-      ->orderBy('newsdate', 'asc')
-      ->first();
+    /*
+      If next news piece depends on whether or not
+      code runs on production.
+        1) if in production, next is also bound by $today
+        2) if not in production, next may be in the future
+          ie it may be a future-dated post that has already been written but not released
+    */
+    $today = Carbon::today();
+    if (\App::environment('production')) {
+      $next_newsobject = NewsObject
+        ::where('newsdate', '>', $this->newsdate)
+        ->where('newsdate', '<=', $today)
+        ->orderBy('newsdate', 'asc')
+        ->first();
+    } else {
+      // non-production env's case
+      $next_newsobject = NewsObject
+        ::where('newsdate', '>', $this->newsdate)
+        ->orderBy('newsdate', 'asc')
+        ->first();
+    }
     if ($next_newsobject!=null) {
       return $next_newsobject;
     }
     $oldest_newsobject = NewsObject
       ::orderBy('newsdate', 'asc')
       ->first();
+    // protect 'production' from returning a possible future-dated post
+    if (\App::environment('production')) {
+      if ($oldest_newsobject!=null && $oldest_newsobject->newsdate > $today) {
+        return null;
+      }
+    }
+    /*
+      Notice a null may be returned from here, which means
+        perhaps DB is empty.
+    */
     return $oldest_newsobject;
   }
 
