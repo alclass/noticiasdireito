@@ -1,27 +1,54 @@
 
-### Existem situações em que um mesmo fato do Direito pode receber um tratamento judírico diferenciado.
+#### No dia 25 de maio 2017, o plenário do **STF** -- o Supremo Tribunal Federal -- votou por maioria a decisão de dois _REs_ -- ié, Recursos Extraordinários -- com _repercussão geral_.
 
-No dia 25 de maio de 2017, o plenário do Supremo Tribunal Federal votou por maioria a decisão de dois REs com repercussão geral.
+###### O assunto deste artigo envolve a indenização contra o _extravio de bagagem_ em voos aéreos.
 
-Em suma, com a decisão retromencionada, o extravio de bagagem em voos domésticos e em voos internacionais passa a possuir montantes indenizatórios diferentes, em caso de perda dos pertences, entre viagens aéreas nacionais e internacionais.
+O _extravio de bagagem_:
 
-Esta polêmica decisão do STF causou relativa insatisfação nos setores consumeristas da advocacia e dos que militam em prol da defesa do consumidor.
+- em **voos domésticos** e
+- em **voos internacionais** 
 
-A princípio, a indenização em voos internacionais ficaria limitada a um patamar monetariamente inferior em relação a sua contraparte doméstico.
+passou a gerar limites indenizatórios em patamares diferentes, no caso da perda da bagagem.
 
-Em tema correlacionado, é possível encontrar escritórios advocatícios alegando em anúncios no Google -- embora aqui nasça outras questões relativas a anúncios advocatícios (...) -- serem capazes de mover ações indenizatórias: morais e materiais, na alçada dos R$ 35.000,00.  Supondo desta forma que esses anúncios publicamente visíveis estejam corretos, os valores indenizatórios internacionais ficariam a um patamar bem mais baixo, ao redor dos R$ 4.500,00. De acordo com demais comentaristas sobre o assunto, este seria valor aproximado que se deduz das regras ligadas às Convenções Internacionais (Varsóvia e Montreal) sobre a matéria.
+A _polêmica decisão_ do **STF** retromencionada causou uma perceptiva insatisfação:
 
-Embora seja polêmico este assunto e tenha certamente criado dessatisfação na seara da prática consumerista, a ideia de sobressalto envolvida se baseia no fato de que, uma vez que o país é signatário de Convenções Internacionais sobre a matéria (Varsóvia e Montreal), esta deveria regular a questão para os voos internacionais. Para os voos domésticos, do outro lado, o CDC é o estatuto competente.
+1. nos setores _consumeristas_ da advocacia e 
+2. entre os que militam em prol da **defesa do consumidor**, 
+
+considerados os padrões mais modernos de nosso CDC -- o Código de Defesa do Consumidor.
+
+<cite>
+Em suma, do ponto de vista monetário, a indenização em voos internacionais passou a situar-se em um patamar monetário mais baixo em relação a sua contraparte em voos domésticos.
+</cite>
+
+Assim, ilustremos, com a tabela a seguir, esta diferença de limite indenizatório retroindicada:
+
+| Voo           | Ao redor dos (em R$) | Fonte da expectativa dada à esquerda                                     |
+|---------------|----------------------|--------------------------------------------------------------------------|
+| Internacional | 4.500,00             | Matérias sobre as **Convenções Internacionais** (Varsóvia e Montreal) (1)|
+| Doméstico     | 35.000,00            | Anúncios no Google em que escritórios indicam a expectativa (2)          |
+
+
+Notas:
+
+1. De acordo com demais comentaristas sobre o assunto, estes R$ 4.500,00 seriam o valor aproximado que se deduz das regras ligadas às **Convenções Internacionais** (Varsóvia e Montreal) sobre a matéria.
+
+2. Embora um pouco fora do tema principal deste artigo, é possível encontrar _escritórios advocatícios_ anunciando, via Google Ads, serem capazes de obter para clientes, por meio de ações indenizatórias: _materiais_ e _morais_, valores na alçada dos R$ 35.000,00 (\*);
+
+3. (\*) reconhecidas as questões de limites aos anúncios advocatícios cf. ética-estatutária da OAB, assunto no momento fora do escopo deste artigo.
+
+\*\*\*
+
+Embora este assunto seja relativamente polêmico e tenha certamente criado insatisfação na seara da prática consumerista, a ideia subjacente que se espera e percebe sobre a diferenciação é a de que ela se baseia no fato de o país ser signatário de _Convenções Internacionais_ sobre a matéria (Varsóvia e Montreal) e, por esta fulcral razão, a norma internacional deveria regular a questão para os voos internacionais, na lógica do art. 178 CF cf. Emenda Constitucional 7ª 1995. Para os voos domésticos, do outro lado, o CDC -- o Código de Defesa do Consumidor -- é o estatuto competente da jurisdição nacional.
 
 
 Mais informações:
 -----------------
 
-1) Página STF de Acompanhamento Processual:
+1) Página **STF** Acompanhamento Processual:
 
 http://www.stf.jus.br/portal/processo/verProcessoAndamento.asp?numero=636331&classe=RE&origem=AP&recurso=0&tipoJulgamento=M
 
-2) Artigo do Portal Migalhas:
+2) Artigo do Portal Migalhas sobre o assunto:
 
 http://www.migalhas.com.br/Quentes/17,MI259439,21048-STF+Indenizacao+por+extravio+de+bagagem+e+regulada+por+convencao
-
