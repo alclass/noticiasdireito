@@ -40,32 +40,53 @@
   O Notícias
   <a href="{{ route('entranceroute') }}">
     Direito.Science
-  </a> é um portal eletrônico de artigos temáticos na área do Direito. Ele também encontra-se integrado com o
+  </a> é um portal eletrônico de artigos temáticos na área do
+  <b>Direito</b> e, mais amplamente, das ciências <b>sociojurídicas</b>.
+  Ele também se encontra integrado com o
   <a href="//saberdireitodois.direito.win">
     Saber Direito Dois
-  </a>, que é uma aplicação web que perfaz uma videoescola que recupera e redifunde os videocursos do Saber Direito da TV Justiça.
+  </a>, que é uma <em>aplicação web</em> que perfaz uma videoescola
+  que recupera e redifunde os videocursos do Saber Direito da
+  TV Justiça.
 </p>
 
 <p>
   O portal possui hoje em seu acervo:
   <a href="{{ route('entranceroute') }}">
     {{ $news_obj->total_de_noticias }} artigos
-  </a>, com uma produção média de aproxidamente dez inéditos artigos por mês, um pouco para mais, um pouco para menos.
+  </a>, com uma produção média de aproxidamente dez inéditos artigos por mês,
+  um pouco para mais, um pouco para menos.
 </p>
-<!--
 <p>
   Para acompanhar os artigos conforme saiam, de uma forma
-  mais automático-notificatória, é possível fazê-lo usando um aplicativo de leitor RSS. Aplicativos tanto para celular quanto para computadores de mesa podem notificar as novas publicações. O endereço-URL para o leitor RSS é:
+  mais automático-notificatória,
+  é possível fazê-lo com a ajuda de um aplicativo de leitor RSS.
 </p>
 <p>
-  <a href="{{ route('entranceroute') }}">
-    {{ $news_obj->total_de_noticias }} artigos
+  Dependendo de sua plataforma, celular ou computador
+  de mesa, procure na <em>Play-Store</em> ou equivalente por um
+  <b>aplicativo (ou <em>app</em>) leitor de notícias RSS feeds</b>.
+  Depois de instalá-lo, clique ou digite nele o endereço-URL abaixo
+  das entradas RSS:
+</p>
+<hr>
+<p style="text-align:center">
+<?php
+  $rssfeeds_url = URL::to('/') . '/feed';
+?>
+  <i class="fa fa-rss fa-fw"></i>
+  <a href="{{ $rssfeeds_url }}">
+    {{ $rssfeeds_url }}
   </a>
 </p>
--->
+<hr>
+<p>
+  Instalando o leitor e usando o endereço URL RSS acima, o aplicativo
+  lhe fará, dependendo da configuração e algumas outras variáveis,
+  notificação automática de novas publicações conforme saiam.
+</p>
 
 <br>
-<hr>
 <br>
 
 </div><!-- /.blog-main -->
@@ -73,15 +94,8 @@
   <div class="sidebar-module sidebar-module-inset">
   </div>
   @include('frag_templates/sidebar_arquivo')
-  <div class="sidebar-module">
-    <hr>
-    <h4>Portais</h4>
-    <ol class="list-unstyled">
-      <li><a href="//saberdireitodois.direito.win">Saber Direito Dois</a></li>
-      <li><a href="//direito.science">Direito dot Science</a></li>
-      <li><a href="//direito.win">Direito dot Win</a></li>
-    </ol>
-  </div>
+  @include('frag_templates/sidebar_portais_n_rss')
+
 </div><!-- /.blog-sidebar -->
 </div><!-- /.row -->
 

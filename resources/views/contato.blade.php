@@ -56,9 +56,9 @@
 </p>
 
 <p>
-  Lembramos também que todas as entradas de artigos e notícias no Portal possui, ao final da página, uma interface de discussão e comentários do <b>Disqus</b>, que é o sistema terceiro que usamos para a interatividade por artigo e notícia.
+  Lembramos também que todas as entradas de artigos e notícias
+  no Portal possuem, ao final da página, uma interface de discussão e comentários do <b>Disqus</b>, que é o sistema terceiro que usamos para a interatividade por artigo e notícia.
 </p>
-
 
 <br>
 <hr>
@@ -69,15 +69,8 @@
   <div class="sidebar-module sidebar-module-inset">
   </div>
   @include('frag_templates/sidebar_arquivo')
-  <div class="sidebar-module">
-    <hr>
-    <h4>Portais</h4>
-    <ol class="list-unstyled">
-      <li><a href="//saberdireitodois.direito.win">Saber Direito Dois</a></li>
-      <li><a href="//direito.science">Direito dot Science</a></li>
-      <li><a href="//direito.win">Direito dot Win</a></li>
-    </ol>
-  </div>
+  @include('frag_templates/sidebar_portais_n_rss')
+
 </div><!-- /.blog-sidebar -->
 </div><!-- /.row -->
 
