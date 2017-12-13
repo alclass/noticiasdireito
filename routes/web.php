@@ -18,6 +18,20 @@ Route::get('/', [
   'uses' => 'NoticiasController@mount_newslisting_for_entrance',
 ]);
 
+Route::get('/contato', [
+  'as' => 'contatoroute',
+  'uses' => function() {
+    return view('contato');
+  },
+]);
+
+Route::get('/sobre', [
+  'as' => 'sobreroute',
+  'uses' => function() {
+    return view('sobre');
+  },
+]);
+
 Route::get('/{year}/{month}/{day}/{underlined_newstitle}', [
   'as' => 'newsobjectroute',
   'uses' => 'NoticiasController@show_newspage',

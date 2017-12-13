@@ -7,7 +7,7 @@
 ?>
 @extends('basetemplates.masterlayout')
 @section('title')
-  Notícias - Portal Direito.Science
+  Notícias Portal Direito.Science: assuntos sociojurídicos contemporâneos
 @endsection
 
 @section('css_section')
@@ -17,59 +17,7 @@
 
 @section('bodycontent_section')
 
-
-  <div class="blog-masthead">
-      <div class="container">
-        <nav class="nav blog-nav">
-          <a class="nav-link active" href="{{ URL::to('/') }}">Artigos Recentes</a>
-          <a class="nav-link" href="//saberdireitodois.direito.win/cursos">Videocursos</a>
-          <a class="nav-link" href="//saberdireitodois.direito.win/sobre">Sobre</a>
-        </nav>
-      </div>
-    </div>
-
-    <div class="blog-header">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-sm-2">
-            <img src="https://i.pinimg.com/236x/32/01/6c/32016c4943083f05377f8cb3d2900f2f--lady-justice-tattoo-inspiration.jpg"
-              alt="Imagem-ícone que representa a Justiça e o Direito com a Deusa Vendada com uma espada"
-              height="200" width="100" />
-          </div>
-
-            <div class="col-sm-7">
-        <h1 class="blog-title">
-          <br>
-          Notícias
-             <a href="{{ URL::to('/') }}">
-              Direito.Science
-            </a>
-        </h1>
-        <p class="lead blog-description">
-          Assuntos sociojurídicos contemporâneos
-        </p>
-
-      </div>
-
-
-
-      <div class="col-sm-2">
-
-        <p style="font-size:small">O Portal
-          <br>
-          Notícias <em>Direito
-          <br>
-          dot Science</em>
-          <br>
-          traz assuntos atuais, pontuais e de repercussão no mundo sociojurídico.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</div>
+  @include('basetemplates/pagesheader')
 
     <p>
       <br>
@@ -153,53 +101,41 @@
 <br>
 
 </div><!-- /.blog-main -->
-        <div class="col-sm-3 offset-sm-1 blog-sidebar">
-
-          <div class="sidebar-module sidebar-module-inset">
-
-
-
-          </div>
-
-          @include('sidebar_arquivo')
-
-          <div class="sidebar-module">
-            <hr>
-            <h4>Portais</h4>
-            <ol class="list-unstyled">
-              <li><a href="//saberdireitodois.direito.win">Saber Direito Dois</a></li>
-              <li><a href="//direito.science">Direito dot Science</a></li>
-              <li><a href="//direito.win">Direito dot Win</a></li>
-            </ol>
-          </div>
-        </div><!-- /.blog-sidebar -->
-
-      </div><!-- /.row -->
-
+    <div class="col-sm-3 offset-sm-1 blog-sidebar">
+      <div class="sidebar-module sidebar-module-inset">
+      </div>
+      @include('frag_templates/sidebar_arquivo')
+      <div class="sidebar-module">
+        <hr>
+        <h4>Portais</h4>
+        <ol class="list-unstyled">
+          <li><a href="//saberdireitodois.direito.win">Saber Direito Dois</a></li>
+          <li><a href="//direito.science">Direito dot Science</a></li>
+          <li><a href="//direito.win">Direito dot Win</a></li>
+        </ol>
+      </div>
+    </div><!-- /.blog-sidebar -->
+  </div><!-- /.row -->
 <hr>
-
       <p style="font-size:small">
         Google Ads
       </p>
-
       <p>
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8025632868883287"
-                     data-ad-slot="6238982907"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-8025632868883287"
+             data-ad-slot="6238982907"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
       </p>
 <hr>
-
 <h5>
   Videocursos Recentes do Saber Direito
 </h5>
-
 <table>
   <col width="4%">
   <col width="2%">
@@ -243,13 +179,9 @@
     @endforeach
 </table>
 
-
-
     <br>
     <footer class="blog-footer" align="center">
       <br>
-
-
       <br>
       <p>
         <a href="#">Voltar ao Topo da Página</a>
