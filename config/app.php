@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt',
 
     /*
     |--------------------------------------------------------------------------
@@ -178,7 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         // Added on 2017-12-11
-        Roumen\Feed\FeedServiceProvider::class,
+        // Roumen\Feed\FeedServiceProvider::class,
 
     ],
 
@@ -230,7 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         // Added on 2017-12-11
-        'Feed'      => Roumen\Feed\Feed::class,
+        // 'Feed'      => Roumen\Feed\Feed::class,
 
     ],
 

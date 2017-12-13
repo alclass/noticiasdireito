@@ -105,15 +105,7 @@
       <div class="sidebar-module sidebar-module-inset">
       </div>
       @include('frag_templates/sidebar_arquivo')
-      <div class="sidebar-module">
-        <hr>
-        <h4>Portais</h4>
-        <ol class="list-unstyled">
-          <li><a href="//saberdireitodois.direito.win">Saber Direito Dois</a></li>
-          <li><a href="//direito.science">Direito dot Science</a></li>
-          <li><a href="//direito.win">Direito dot Win</a></li>
-        </ol>
-      </div>
+      @include('frag_templates/sidebar_portais_n_rss')
     </div><!-- /.blog-sidebar -->
   </div><!-- /.row -->
 <hr>

@@ -8,7 +8,10 @@ use App\Models\Util\UtilParamsForNewsApp;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
-class NewsObject extends Model {
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
+
+class NewsObject extends Model implements Feedable {
 
   public static function getLastN($n_lastones=3) {
     $n_lastones = intval($n_lastones);
@@ -321,6 +324,34 @@ class NewsObject extends Model {
     }
     return $next_or_first->routeurl_as_array;
   }
+
+  /*
+    Beginning of
+    RSS Feeds methods
+  */
+
+  public function toFeedItem() {
+    return FeedItem::create()
+      ->id($this->id)
+      ->title($this->newstitle)
+      ->summary($this->description)
+      ->updated($this->newsdate)
+      ->link(route('newsobjectroute', $this->routeurl_as_array))
+      ->author('Direito.Science');
+  }
+
+  public static function getFeedItems() {
+    $today = Carbon::today();
+    return NewsObject
+      ::where('newsdate', '<=', $today)
+      ->orderBy('newsdate', 'desc')
+      ->take(10)->get();
+  }
+
+  /*
+    End of
+    RSS Feeds methods
+  */
 
   public function get_lastest_n_courses($lastest_n=3) {
     $lastest_n = intval($lastest_n);

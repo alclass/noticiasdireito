@@ -32,6 +32,8 @@
 </script>
 @endif
 
+@include('feed::links')
+
 @yield('css_section')
 </head>
 <body>
