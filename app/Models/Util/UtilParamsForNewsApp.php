@@ -10,6 +10,16 @@ class UtilParamsForNewsApp {
   const SABDIRDOIS_BASE_URL      = 'saberdireitodois.direito.win';
   const NOTICIASDIREITO_BASE_URL = 'noticias.direito.science';
 
+  const N_PAGINATE = 7;
+  const N_PAGINATE_NONPROD = 50;
+
+  public static function get_n_paginate() {
+    if (\App::environment('production')) {
+      return self::N_PAGINATE;
+    }
+    return self::N_PAGINATE_NONPROD;
+  }
+
   public static function treat_protocol_prefix($p_protocol)  {
     if (empty($p_protocol)) {
       return 'http:';

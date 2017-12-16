@@ -4,16 +4,16 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\NewsModels\NewsObject;
 use App\Models\NewsModels\MonthObject;
+use App\Models\Util\UtilParamsForNewsApp;
 use App\Models\Util\FileSystemUtil;
 use Carbon\Carbon;
 // use Parsedown;
 
 class NoticiasController extends Controller {
 
-  const N_PAGINATE = 7;
-
   public static function get_n_paginate() {
-    return self::N_PAGINATE;
+    return UtilParamsForNewsApp::get_n_paginate();
+    //return self::N_PAGINATE;
   }
 
 
