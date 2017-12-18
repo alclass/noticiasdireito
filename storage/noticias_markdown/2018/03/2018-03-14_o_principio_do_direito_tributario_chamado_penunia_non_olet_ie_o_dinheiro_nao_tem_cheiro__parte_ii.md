@@ -29,27 +29,25 @@ praticando um crime considerado muito danoso à Sociedade, pelas várias implica
 
 Cabe ressalvar que hoje já é ponto pacificado que o Estado não pode cobrar o **ICMS** (o Imposto sobre a Circulação de Mercadorias e Serviços) pela venda de drogas ilícitas; uma _quebra_, por assim dizer, com o _pecunia non olet_.
 
+<br>
+##### A Segunda Particularidade do _Pecunia Non Olet_ no art. 118 CTN
+<br>
+
 Passemos agora ao segundo inciso do art. 118 **CTN**:
 
 <cite style="font-size:small">
 II - dos efeitos dos fatos efetivamente ocorridos.
 </cite>
 
-Novamente, em nossa opinião, temos uma regra "espinhosa". O comando do inc. II acima é injusto contra o próprio **princípio e motivador maior** de que o imposto é devido pela ocorrência de um:
+Novamente, em nossa opinião, temos uma regra "espinhosa". O comando do inc. II acima é injusto contra o próprio **princípio e motivador maior** de que o imposto é devido pela ocorrência/incidência de um:
 
 - **_fato gerador_**.
 
-Ou seja, se o **_fato gerador_** se reverter por um vício do **negócio jurídico** civil subjacente, o fisco não está nem aí, pagou está pago, não há como recuperar o recurso pago em imposto, muito embora o *_fato gerador_*, em si, tenha deixado de existir, na hipótese de nosso objetivo, legalmente.
+Ou seja, se o **_fato gerador_** se reverter -- ié, deixar de existir -- por um vício do **negócio jurídico** civil subjacente, o fisco não está nem aí, pagou está pago, não há como recuperar o recurso pago em imposto, muito embora o *_fato gerador_*, em si, tenha deixado de existir, na hipótese que escolhemos para análise, legalmente.
 
-##### Conclusões
+Queremos desde a saída mostrar que este acima não é um caso a pedir _repetição de indébito_, ié, o pedido de receber de volta tributo pago indevidamente. Não é esta hipótese que pincelamos para este inciso II.
 
-Neste artigo, trouxemos uma reflexão sobre o _pecunia non olet_, enquanto um _princípio_ do **Direito Tributário** regrado no art. 118 do **CTN**.
-
-Fizemos duas reflexões sobre a moralidade social de este "espinhoso" _princípio_, uma para cada um dos dois incisos do art. 118 **CTN**. Em suma, elas são:
-
-1. o Estado, na _mens legis_ do _pecunia non olet_, impõe o recebimento de tributos por _fatos geradores_ derivados de crime;
-
-2. o Estado, em outra _mens legis_ do _pecunia non olet_, impõe o recebimento de tributos por _fatos geradores_ que, embora tenham existido num primeiro momento, deixaram de existir por reversões juridicamente legais do Estatuto do **Código Civil** que é **Lei**, também!
+Assim avançado, este ponto acima merece uma explanação mais pouco aclarada, o que faremos à continuação, na próxima parte deste artigo.
 
 <br>
 <br>
