@@ -88,28 +88,9 @@
             </a>
           </nav>
           </div>
-<hr>
 
-<p style="font-size:small">
-  Google Ads
-</p>
+@include('frag_templates/googleads_include')
 
-<p>
-          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <ins class="adsbygoogle"
-               style="display:block; text-align:center;"
-               data-ad-layout="in-article"
-               data-ad-format="fluid"
-               data-ad-client="ca-pub-8025632868883287"
-               data-ad-slot="6238982907"></ins>
-          <script>
-               (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-</p>
-
-<p>
-  <br>
-</p>
 
 <br>
 <hr>
@@ -152,33 +133,8 @@
 </table>
           </div><!-- /.blog-post -->
 
-<hr>
-  <p style="font-size:small">
-    Sistema
-    <a name="disqus_comments">
-      Disqus
-    </a>
-    para Discussão e Comentários
-  </p>
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = "{{ route('newsobjectroute', $news_obj->routeurl_as_array) }}";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "{{ $news_obj->gen_uniqueid_for_disqus_et_al() }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-  (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://direito-win.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-  </script>
-  <noscript>
-    Please enable JavaScript to view the
-    <a href="https://disqus.com/?ref_noscript">
-      comments powered by Disqus.
-    </a>
-  </noscript>
+
+@include('frag_templates/disqus_include')
 
         </div><!-- /.blog-main -->
         <div class="col-sm-3 offset-sm-1 blog-sidebar">
