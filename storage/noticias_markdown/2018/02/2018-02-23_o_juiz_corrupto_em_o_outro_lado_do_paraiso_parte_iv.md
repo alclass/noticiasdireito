@@ -24,15 +24,14 @@ não adianta nada vir para a _faculdade_, aprender **Direito** e **Direito Proce
 o magistrado que lá estiver, do _outro lado_ (no sentido da posição do juiz, obviamente), decidir fazer _tudo diferente_.
 </cite>
 
+
+###### Em conclusão
+
+Nossa conclusão é que a questão dos riscos em poder haver **juízes corruptos** é, de certo, uma questão fulcral para a **sociedade**, para o _viver em sociedade_ e, em fundo, para como _organizar_ o **judiciário** de tal forma a minimizar -- e quiça a erradicar -- tais riscos.
+
 \*\*\*
 
-É certo que a trama da novela é uma ficção, mas, vendo o mundo, os jornais, as misérias...; há que se manter em constante vigília.  
-
-Como ensinou o **Grande Mestre**:
-
-<cite style="font-size:small">
- **Vigiai sempre!**
-</cite>
+É certo que a trama da novela é uma ficção, mas, vendo o mundo, os jornais, as misérias...; há que se manter em constante vigília.
 
 
 <br>

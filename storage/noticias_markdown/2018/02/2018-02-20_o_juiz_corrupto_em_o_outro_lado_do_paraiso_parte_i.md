@@ -16,7 +16,7 @@ Tecnicamente, _grau de jurisdição_ não é sinônimo de _instância judiciári
 1. o primeiro _grau de jurisdição_ se encontra na primeira _instância judiciária_ (em geral, os juizados) e
 2. o segundo _grau de jurisdição_ se encontra na segunda _instância judiciária_ (em geral, os tribunais) .
 
-As regras de competência jurisdicional criam alguns contornos mais complexos ao sistema jurisdicional de nosso **Ordenamento Jurídico**, que geram exceção à regra _grau-versus-instância_ dada acima. Por exemplo, juízes de Direito estaduais possuem foro privilegiado para serem julgados na segunda _instância judiciária_. Assim, para eles:
+As regras de competência jurisdicional criam alguns contornos mais complexos ao sistema jurisdicional de nosso **Ordenamento Jurídico**, que geram exceção à regra _grau-versus-instância_ dada acima. Por exemplo, juízes de Direito estaduais possuem foro privilegiado para serem julgados na _segunda instância judiciária_, nos estados, representada pelos **TJ**'s, ié, os **Tribunais de Justiça**, cada Estado tendo e organizando o seu. Assim, para eles:
 
 - o primeiro _grau de jurisdição_ se encontra na segunda _instância judiciária_.
 
