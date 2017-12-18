@@ -21,7 +21,7 @@ ainda assim pagam impostos, pois o inc. II retroportado diz que os tributos são
 - _dos efeitos dos fatos efetivamente ocorridos_.
 
 
-Este o ponto alto que devemos considerar nesta reflexão, pois, os casos de _negócios jurídicos_ que, por:
+Este é o ponto alto que devemos considerar nesta reflexão, pois, os casos de _negócios jurídicos_ que, por:
 
 - _vícios_ ou
 - _quebras contratuais_, 

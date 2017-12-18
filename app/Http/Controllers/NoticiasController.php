@@ -63,7 +63,19 @@ class NoticiasController extends Controller {
     ]);
   }
 
-  public function does_newspiece_exist($year, $month, $day, $underlined_newstitle) {
+  private function does_newspiece_exist($year, $month, $day, $underlined_newstitle) {
+    $year = intval($year);
+    if ($year==0) {
+      return false;
+    }
+    $month = intval($month);
+    if ($month==0) {
+      return false;
+    }
+    $day = intval($day);
+    if ($day==0) {
+      return false;
+    }
     $datestr = "$year-$month-$day";
     $newsdate = new Carbon($datestr);
     return NewsObject

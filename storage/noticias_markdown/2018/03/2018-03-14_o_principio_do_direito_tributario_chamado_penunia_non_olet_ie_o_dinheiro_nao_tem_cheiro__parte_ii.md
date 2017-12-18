@@ -11,6 +11,10 @@ Na parte anterior, havíamos indicado o seguinte:
 Para nossos objetivos, neste artigo, faremos duas derivações morais do _pecunia non olet_, uma para cada inciso do art. 118 **CTN** retroportado.
 </cite>
 
+<br>
+##### A Primeira Particularidade do _Pecunia Non Olet_ no art. 118 CTN
+<br>
+
 Vejamos então o primeiro inciso, ié, o inc. I art. 118 **CTN**:
 
 <cite style="font-size:small">
@@ -23,11 +27,11 @@ Este inciso é, de certo, em nossa opinião, fortemente "espinhoso". Em suma, o 
 
 O caso-exemplo mais clássico é aquele em que o traficante deve imposto de renda pelo **fato gerador** de:
 
-- _auferior renda_
+- _auferir renda_
 
 praticando um crime considerado muito danoso à Sociedade, pelas várias implicações que dele decorrem.
 
-Cabe ressalvar que hoje já é ponto pacificado que o Estado não pode cobrar o **ICMS** (o Imposto sobre a Circulação de Mercadorias e Serviços) pela venda de drogas ilícitas; uma _quebra_, por assim dizer, com o _pecunia non olet_.
+Cabe ressalvar que hoje já é ponto pacificado que o Estado não pode cobrar o **ICMS** (o Imposto sobre a Circulação de Mercadorias e Serviços) pela venda de drogas ilícitas; uma _mínima quebra_, por assim dizer, com o _pecunia non olet_.
 
 <br>
 ##### A Segunda Particularidade do _Pecunia Non Olet_ no art. 118 CTN
@@ -47,7 +51,7 @@ Ou seja, se o **_fato gerador_** se reverter -- ié, deixar de existir -- por um
 
 Queremos desde a saída mostrar que este acima não é um caso a pedir _repetição de indébito_, ié, o pedido de receber de volta tributo pago indevidamente. Não é esta hipótese que pincelamos para este inciso II.
 
-Assim avançado, este ponto acima merece uma explanação mais pouco aclarada, o que faremos à continuação, na próxima parte deste artigo.
+Assim avançado, este ponto acima merece uma explanação um pouco mais aclarada, o que faremos à continuação, na próxima parte deste artigo.
 
 <br>
 <br>
