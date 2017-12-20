@@ -1,3 +1,9 @@
+<?php
+  if (!isset($news_obj) || $news_obj==null) {
+    $news_obj = \App\Models\NewsModels\NewsObject
+      ::get_last_or_create_mock();
+  }
+?>
 <div class="sidebar-module">
   <hr>
   <h4>Arquivo</h4>

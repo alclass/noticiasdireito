@@ -1,8 +1,13 @@
 <?php
   if(!isset($newsobjects) || empty($newsobjects)) {
-    $news_obj = \App\Models\NewsModels\NewsObject::get_last_or_create_mock();
+    $news_obj = \App\Models\NewsModels\NewsObject
+      ::get_last_or_create_mock();
     $newsobjects = collect();
     $newsobjects->push($news_obj);
+  }
+  if (!isset($news_obj) || $news_obj==null) {
+    $news_obj = \App\Models\NewsModels\NewsObject
+      ::get_last_or_create_mock();
   }
 ?>
 @extends('basetemplates.masterlayout')
