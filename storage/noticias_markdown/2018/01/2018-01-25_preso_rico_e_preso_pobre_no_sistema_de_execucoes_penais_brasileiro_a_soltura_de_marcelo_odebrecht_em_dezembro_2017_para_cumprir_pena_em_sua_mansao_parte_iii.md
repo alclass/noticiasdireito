@@ -3,42 +3,42 @@
 ###### esta reflexão converge na assimetria de tratamentos entre ricos e pobres dentro do sistema prisional do país.
 <br>
 
-Na parte anterior, passamos em revista as condições de execução de pena de Odebrecht. Nesta terceira parte, iremos de encontro à conclusão deste artigo.
+Na parte anterior, passávamos em revista as condições de execução de pena de Odebrecht. Nesta terceira parte, traceremos suspeitas de que a justiça criminal não só a Odebrecht, mas provavelmente a um grupo muito maior de corruptores, ativos e passivos, está longe de ter sido _justa_:
+
+- tanto no sentido de alcançar o que foi feito em crimes, 
+- quanto no sentido comparativo da pena de presos mais pobres. 
+
+Embora este seja uma assunto para uma próxima ocasião, como tem dito várias vezes o Ministro Luís Roberto Barroso, do Supremo Tribunal Federal, em paráfrase: 
+
+<cite>
+Tais corrupções, acertos de esquemas e superfaturamentos tornaram-se o "normal" neste país; _**nós** temos que mudar isso_.
+</cite>
+
+Voltemos então brevemente ao cartel das empreiteiras mencionado na parte anterior, em relação às construções de metrô país a fora.
+
+##### O Codenome do Cartel era **Tatu Tênis Clube**
+
+O nome Tatu, como codenome para o Cartel, era dado pelo apelido da principal máquina que faz as escavações de túneis de metrô: o _tatu_ ou _tatuzão_. Segundo as reportagens, eles também tinham uma aparência de confraria esportiva, sendo G5 o grupo das cinco maiores empreiteiras. 
+
+(Abrindo um breve parêntese, não obstante, o que as reportagens não conseguem explicar -- ou talvez ninguém consiga explicar --, é como essas falcutruas são feitas, dado que licitações possuem um arcabouço protetivo, por comissões de licitação independentes e são acompanhadas e auditadas pelas controladorias e tribunais de conta.)
 
 ##### _Res Judicata_
 
-A condenação de Marcelo Odebrecht em tela, por sua vez, é _res judicata_, ou seja, _coisa julgada_, e alcança apenas as acusações que pertenciam às ações penais nas quais foi condenado. Essa coincidência do **Tatu Tênis Clube** nas notícias, na mesma e exata _data_, é de certo uma estonteante coincidência, pois, Marcelo Odebrecht foi provavelmente condenado por apenas uma pequena parte de tudo que deve ter ocorrido, pois, com a surpresa ou não da concorrente notícia sobre o **Tatu Tênis Clube**, há certamente muito, muito mais envolvido.
+A condenação de Marcelo Odebrecht em tela, por sua vez, é _res judicata_, ou seja, _**coisa julgada**_, e alcança apenas as acusações que pertenciam às ações penais nas quais foi condenado. Essa coincidência do **Tatu Tênis Clube** nas notícias, na mesma e exata _data_, é de certo uma estonteante coincidência, pois, Marcelo Odebrecht foi provavelmente condenado por apenas uma pequena parte de tudo que deve ter ocorrido, pois, com a surpresa ou não da concorrente notícia sobre o **Tatu Tênis Clube**, há certamente muito, muito mais envolvido.
 
+\*\*\*
 
-#### A Miséria do Preso Pobre no País
+Na próxima parte e na seguinte, traremos referências de relatórios sobre a situação do Sistema Prisional Brasileiro.
 
-Todos os que acompanham a _Operação_ **Lavo-Jato**, sabem que Marcelo Odebrecht é confesso -- difícil talvez seja conhecer a extensão desse _ser confesso_. Logo, não há espaço aqui para realizar questionamentos de existência ou não de uma condenação duvidosa, proferida por juízes e tribunais que, por alguma ou outra tese, perderam os sentidos altos e caros da neutralidade, que é o norte daqueles que devem e têm que julgar.
-
-Nem tampouco, por outro lado, é intenção deste artigo querer mudar dosimetrias de pena ou, quiça, advogar por uma famigerada _pena de morte_ que, em nosso país, só é permitida em casos de guerra declarada e é, no final das contas, uma questão militar.
-
-Dito isto, é uma intenção deste artigo -- e a qual consideramos legítima -- pensar que é inevitável concluir que nosso sistema prisional não é equânime, ou seja, o preso pobre tem uma situação prisional muito desigual à situação prisional do preso rico.
-
-Isto, nós acreditamos, deve parecer um conhecimento que todos têm ou percebem, não parece ser algo difícil de visualizar.
-
-
-#### Conclusão
-
-Embora as condições de saída de Marcelo Obebrecht estejam de acordo com a lei e o sistema de execuções penais, as condições do preso pobre mostram um mundo de enorme miséria e dúvida sobre o que acontece dentro das prisões, nos contextos de superlotação, falta de programas de reabilitação e riscos de motins, nos quais muitos presos, quando deflagrados tais motins, são condenados à morte.
-
-Mas a situação analítica não para aí. Existe uma subliminar e estranha percepção de que ser corrupto e agir _lato-sensu_ como um ladrão parece valer a pena. O caso Marcelo Obedrecht parece ter o seguinte infeliz resumo: foi o ladrão corrupto que foi, inclusive confessando seus crimes e, no final, teve uma "pena efetiva pequena", manteve-se milionário e nossa Justiça é o que é.
-
-<cite>
-Que as crianças e os jovens de nosso país não acreditem nessa "invertida fé".
-</cite>
-
+<br>
 
 Mais informações:
 -----------------
 
-1) Página Wikipédia sobre o Sistema Penitenciário Federal:
+1) Artigo online da Gazeta do Povo sobre o **Tatu Tênis Clube**:
 
-https://pt.wikipedia.org/wiki/Sistema_Penitenciário_Federal
+http://www.gazetadopovo.com.br/politica/republica/camargo-correa-entenda-o-que-era-o-tatu-tenis-clube-e-quais-obras-foram-afetadas-pela-corrupcao-4vlpshfdsqad6bxlpisfulfbq
 
-2) Artigo online do Estadão:
+2) Artigo online do Estadão: Marcelo Odebrecht deixa a prisão no Paraná:
 
 http://politica.estadao.com.br/noticias/geral,marcelo-odebrecht-deixa-a-prisao-no-parana,70002125068

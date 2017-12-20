@@ -5,6 +5,9 @@
 
 Na parte anterior deste artigo, informávamos que o empreiteiro havia se deslocado à sede da **Justiça Federal** para uma audiência com a juíza Carolina Lebbos, da **12ª Vara Federal**, que acompanhava a _execução da pena_ de Marcelo Odebrecht. Assim, nesta parte, passaremos em revista as condições de execução de pena de Obedrecht.
 
+
+Na audiência admonitória, na qual ocorreu a _suspensão condicional da pena_, a juíza de execução relatou ao condenado quais seriam as condições do momento seguinte para o cumprimento de sua pena e as consequências no caso de haver descumprimento dos termos.
+
 Em suma, Marcelo Odebrecht continuará sua pena sob as seguintes condições práticas:
 
 1. deverá ficar restrito a sua casa -- que é uma mansão valorada em R$ 13 milhões e 3 mil metros quadrados;
@@ -28,14 +31,12 @@ Marcelo Odebrecht foi o presidente da Construtora Odebrecht e agiu contra a lei 
 
 Na mesma data da soltura, novas notícias foram ao mesmo tempo veiculadas de que as grandes empreiteras formavam um gigantesco cartel para obter as licitações das obras de metrô país afora.
 
-##### O Codenome do Cartel era **Tatu Tênis Clube**
 
-O nome Tatu, como codenome para o Cartel, era dado pelo apelido da principal máquina que faz as escavações de túneis de metrô: o _tatu_ ou _tatuzão_. Segundo as reportagens, eles também tinham uma aparência de confraria esportiva, sendo G5 o grupo das cinco maiores empreiteiras. O que as reportagens não conseguem explicar, é como essas falcutruas são feitas, dado que licitações possuem um arcabouço protetivo, por comissões de licitação independentes e são acompanhadas e auditadas pelas controladorias e tribunais de conta.
 
 
 \*\*\*
 
-Na próxima parte, iremos de encontro à conclusão deste artigo.
+Na próxima parte, no caminho à reflexão indicada no título, traceremos suspeitas de que a justiça criminal não só a Odebrecht, mas provavelmente a um grupo muito maior de corruptores, ativos e passivos, está longe de ter sido _justa_, tanto no sentido de alcançar o que foi feito em crimes, quanto no sentido comparativo da pena de presos mais pobres.
 
 
 Mais informações:

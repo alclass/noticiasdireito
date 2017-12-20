@@ -19,9 +19,8 @@ Além da _progressão de regime_, existe ainda benefícios que podem ser alcanç
 
 No dia 19 de dezembro 2017, seis dias antes do Natal, o empresário Marcelo Odebrecht deixava a carceragem da Polícia Federal em um carro descaracterizado, as reportagens até diziam o horário: às 9h52.
 
-De lá, o empreiteiro deslocou-se à sede da **Justiça Federal** para uma audiência com a juíza Carolina Lebbos, da **12ª Vara Federal**, magistrada que acompanhava a _execução da pena_ de Marcelo Odebrecht.
 
-Na audiência admonitória, na qual ocorreu a _suspensão condicional da pena_, a juíza de execução relatou ao condenado quais seriam as condições do momento seguinte para o cumprimento de sua pena e as consequências no caso de haver descumprimento dos termos.
+De lá, o empreiteiro deslocou-se à sede da **Justiça Federal** para uma audiência com a juíza Carolina Lebbos, da **12ª Vara Federal**, magistrada que acompanhava a _execução da pena_ de Marcelo Odebrecht.
 
 Este artigo continua na próxima parte, à continuação.
 
