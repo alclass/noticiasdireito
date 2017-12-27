@@ -109,6 +109,7 @@
     <div class="col-sm-3 offset-sm-1 blog-sidebar">
       <div class="sidebar-module sidebar-module-inset">
       </div>
+      @include('frag_templates/sidebar_gsearch')
       @include('frag_templates/sidebar_arquivo')
       @include('frag_templates/sidebar_portais_n_rss')
     </div><!-- /.blog-sidebar -->
