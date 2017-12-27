@@ -5,7 +5,6 @@
     <li><a href="//saberdireitodois.direito.win">Saber Direito Dois</a></li>
     <li><a href="//direito.science">Direito dot Science</a></li>
     <li><a href="//direito.win">Direito dot Win</a></li>
-
     <hr>
     <li>
       <?php
@@ -20,6 +19,5 @@
         (para aplicativos leitores)
       </span>
     </li>
-
   </ol>
 </div>

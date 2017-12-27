@@ -27,6 +27,5 @@
         ({{ $news_obj->total_de_noticias }})
       </span>
     </li>
-
   </ol>
 </div>

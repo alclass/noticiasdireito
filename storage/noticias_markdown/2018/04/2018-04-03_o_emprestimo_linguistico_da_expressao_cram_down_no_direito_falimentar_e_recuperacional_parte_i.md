@@ -16,7 +16,7 @@ De um certo _grosso modo_, o momento _recuperacional_ é um tempo a ganhar, a te
 
 ##### _**Cram Down**_
 
-Bem, o parágrafo acima está bastante a _grosso modo_, pois, de certa forma, nosso escopo maior é comentar sobre a expressão _**cram down**_ e não, a maior detalhe, sobre o processo e procedimento de _recuperação empresarial_.
+Feita a menção acima, como a colocamos, em um certo a _grosso modo_, devemos informar que nosso escopo maior é comentar sobre a expressão _**cram down**_, evitando, neste momento, de abordar com maiores detalhes o processo e procedimento de _recuperação empresarial_, tanto o _extrajudicial_, quanto o _judicial_. Não obstante, cabe reiterar que a _LRF_ regulamenta esses dois tipos.
 
 A expressão _**cram down**_ é um empréstimo da língua inglesa nos dois sentidos, ou seja:
 
