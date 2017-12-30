@@ -1,14 +1,21 @@
 <div class="sidebar-module">
   <hr>
   <h4>Pesquisar</h4>
-  <ol>
-    no
+  <p>
+    <span style="font-size:small">
+      no
+      <b>
+        <em>
+          Notícias
+        </em>
+      </b>
+    </span>
     <b>
       <a href="{{ route('entranceroute') }}">
         Direito.Science
       </a>
     </b>
-  </ol>
+  </p>
   <script>
     (function() {
       var cx = 'partner-pub-8025632868883287:5688120810';

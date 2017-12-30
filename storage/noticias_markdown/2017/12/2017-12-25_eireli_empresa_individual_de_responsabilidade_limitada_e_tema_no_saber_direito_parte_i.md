@@ -13,6 +13,13 @@ o tema da:
 
 <br>
 
+Aproveitando a oportunidade da data, em breve pauta ao artigo aqui em tela, gostaríamos de desejar um:
+
+<cite>
+Feliz Natal a todos!!!
+</cite>
+
+
 ###### As cinco videoaulas do curso são:
 
 1. ↝ Introdução e Natureza Jurídica
