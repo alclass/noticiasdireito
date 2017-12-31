@@ -12,7 +12,7 @@ Reparemos que parentes da vítima só poderiam ter alguma ou qualquer iniciativa
 - legitimados a uma _Ação Penal Privada Subsidiária da Pública_.
 
 <br>
-##### A Ideia de Evolução da Vindicação Ter Sido Transferido do Particular à Sociedade
+##### A Ideia de Evolução da Vindicação Ter Sido Transferida do Particular à Sociedade
 
 Na seção: "O Objetivo deste Artigo", acima, na primeira parte, indicamos que:
 

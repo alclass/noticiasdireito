@@ -32,26 +32,24 @@ Route::get('/sobre', [
   },
 ]);
 
-Route::get('/{year}/{month}/{day}/{underlined_newstitle}', [
-  'as' => 'newsobjectroute',
-  'uses' => 'NoticiasController@show_newspage',
-]);
-
-//
-Route::get('/{year}/{month}', [
-  'as' => 'newspermonthroute',
-  'uses' => 'NoticiasController@list_news_for_month',
-]);
-
-//
-Route::get('/{year}', [
-  'as' => 'newsperyearroute',
-  'uses' => 'NoticiasController@list_news_for_year',
-]);
-
 Route::get('/Sitemap.txt', [
   'as' => 'txtsitemaproute',
   'uses' => 'SitemapController@gen_dyn_download_txt_sitemap',
 ]);
 
-Route::feeds();
+Route::get('/{year}', [
+  'as' => 'newsperyearroute',
+  'uses' => 'NoticiasController@list_news_for_year',
+]);
+
+Route::get('/{year}/{month}', [
+  'as' => 'newspermonthroute',
+  'uses' => 'NoticiasController@list_news_for_month',
+]);
+
+Route::get('/{year}/{month}/{day}/{underlined_newstitle}', [
+  'as' => 'newsobjectroute',
+  'uses' => 'NoticiasController@show_newspage',
+]);
+
+// Route::feeds();
