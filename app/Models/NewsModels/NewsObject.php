@@ -69,19 +69,30 @@ class NewsObject extends Model implements Feedable {
     return $total_newspieces_in_year;
   } // ends static count_total_newspieces_in_year_general()
 
-  private static function count_total_newspieces_in_year_inprod($carbondate) {
+  private static function count_total_newspieces_in_year_inprod(
+    $carbondate
+  ) {
     /*
       In production, News Objects are listed up until today's date.
-      There may be future dated pieces that, in this case,
+      There may be future dated pieces in database that, in this case,
         must not be listed.
 
-      So here are the cases:
-      1) if param year (in $carbondate) is less than $today->year,
-        return the general counting, ie, count all items in param year
-      2) else if param year (in $carbondate) is more than $today->year,
-        return 0
-      3) however if param year is equal to $today->year,
-        cut off count at today's date ($today)
+      This method treats TWO hypotheses. They are:
+
+      1) if param year (in $carbondate) is more than $today->year,
+        return 0 (because it's in the future!)
+
+      2) however if param year is equal or less than $today->year,
+        (in this case, see also the somewhat 'tricky' if-code below)
+        the code will use a variable named $cuteoff_date that
+          will have one out of three possible values, ie:
+        2.1) $cuteoff_date may be $today + 1-day
+        2.2) $cuteoff_date may be 'most_recent_article' + 1-day
+        2.3) $cuteoff_date may be the first day of param-year's next year
+
+      TO-DO:
+        1) refactor it to somewhere in Util::...
+        2) write unit tests
     */
     $most_recent_newsobj = self::fetch_most_recent();
     if ($most_recent_newsobj == null) {
@@ -89,25 +100,37 @@ class NewsObject extends Model implements Feedable {
       return 0;
     }
     $today = Carbon::today();
-    // case 1) if param year (in $carbondate) is less than $today->year,
-    if ($most_recent_newsobj->newsdate->year < $today->year) {
-      return self::count_total_newspieces_in_year_general($carbondate);
-    }
-    // case 2) else if param year (in $carbondate) is more than $today->year,
-    if ($most_recent_newsobj->newsdate->year > $today->year) {
-      // in production, this is 0 (see also method's docstring)
+    // Case 1: if param year (in $carbondate) is more than $today->year,
+    if ($carbondate->year > $today->year) {
+      // in production, this is 0 (see also method's docstring above)
       return 0;
     }
     /*
-    case 3) however if param year is equal to $today->year
-
-      From this point on, param year is equal to $today->year
-      so, cut off counting at today's date ($today)
+    Case 2) however if param year is equal or less than $today->year
+      (See method's docstring above)
     */
-    $carbondate_yearbefore = $carbondate->year - 1;
+    $carbondate_yearbefore = $carbondate->copy();
+    $carbondate_yearbefore->year  = $carbondate->year-1;
+    $carbondate_yearbefore->month = 12;
+    $carbondate_yearbefore->day   = 31;
+    $carbondate_yearafter  = $carbondate->copy();
+    $carbondate_yearafter->year = $carbondate->year+1;
+    $carbondate_yearafter->month = 1;
+    $carbondate_yearafter->day   = 1;
+    // Enters $cuteoff_date
+    $cuteoff_date = null;
+    if ($most_recent_newsobj->newsdate > $today) {
+      $cuteoff_date = $today->copy()->addDays(1);
+    }
+    else {
+      $cuteoff_date = $most_recent_newsobj->newsdate->copy()->addDays(1);
+    }
+    if ($cuteoff_date > $carbondate_yearafter) {
+      $cuteoff_date = $carbondate_yearafter;
+    }
     $total_newspieces_in_year = self
       ::where('newsdate', '>', $carbondate_yearbefore)
-      ->where('newsdate', '<=', $today)
+      ->where('newsdate', '<', $cuteoff_date)
       ->count();
     return $total_newspieces_in_year;
   } // ends static count_total_newspieces_in_year_inprod()
