@@ -18,7 +18,7 @@ class MonthObject {
     'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro',
   ];
 
-  public static function make_monthobjs_as_collectof($n_previous_months=1, $p_refdate=null) {
+  public static function make_objs_as_collect($n_previous_months=1, $p_refdate=null) {
     if ($p_refdate==null) {
       $refdate = Carbon::today();
     } else {
@@ -31,6 +31,24 @@ class MonthObject {
       $monthobj = new self($monthcarbon);
       $months_as_collect->push($monthobj);
       $refdate->addMonths(-1);
+      /*
+        The 'if' below is necessary when
+          current month has more days than previous month:
+        Examples:
+        1) Dec/Nov, Oct/Set, Jul/Jun, Mai/Apr
+          all have 31 days to 30 days
+        2) Mar/Feb
+          is a 31 days to 28 (or 29) days relation
+        What happens with method addMonths(-1) at the end of month for these cases:
+          For the cases in 1) above, when day=31,
+          addMonths(-1) result in the first day of the same month!
+          (eg., if date is '2017-12-31', addMonths(-1) results in '2017-12-01',
+           ie, failing to get the previous month)
+        For following 'if' corrects this.
+      */
+      if ($refdate->month == $monthcarbon->month) {
+        $refdate->addMonths(-1);
+      }
     }
     return $months_as_collect;
   }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\NewsModels\NewsObject;
 use App\Models\NewsModels\MonthObject;
+use App\Models\NewsModels\YearObject;
 use App\Models\Util\UtilParamsForNewsApp;
 use App\Models\Util\FileSystemUtil;
 use Carbon\Carbon;
@@ -165,6 +166,62 @@ class NoticiasController extends Controller {
     ]);
   }
 
+  private function list_news_for_current_year_inprodenv() {
+    $refdate = Carbon::today();
+    $carbondate_yearbefore = $refdate->copy();
+    $carbondate_yearbefore->year  = $refdate->year-1;
+    $carbondate_yearbefore->month = 12;
+    $carbondate_yearbefore->day   = 31;
+    $newsobjects = NewsObject
+      ::where('newsdate', '>', $carbondate_yearbefore)
+      ->where('newsdate', '<=', $today)
+      ->orderBy('newsdate', 'asc')
+      ->paginate($n_paginate);
+    $yearobj = new YearObject($refdate);
+    $listing_subtitle = "Artigos no ano $refdate->year";
+    return view('entrance', [
+      'newsobjects'      => $newsobjects,
+      'listing_subtitle' => $listing_subtitle,
+    ]);
+  }
+
+  public function list_news_for_year($year=null) {
+    $n_paginate = self::get_n_paginate();
+    if ($year==null) {
+      //$refdate = Carbon::today();
+      return $this->mount_newslisting_for_entrance();
+      // return redirect()->route('entranceroute')->with(['newsobjects'=>$newsobjects]);
+    }
+    $refdatestr = "$year-01-01";
+    $refdate = new Carbon($refdatestr);
+    $today = Carbon::today();
+    if (\App::environment('production')) {
+      if ($today->year < $refdatestr->year) {
+        return $this->mount_newslisting_for_entrance();
+      }
+      return $this->list_news_for_current_year_inprodenv();
+    }
+    $carbondate_yearbefore = $refdate->copy();
+    $carbondate_yearbefore->year  = $refdate->year-1;
+    $carbondate_yearbefore->month = 12;
+    $carbondate_yearbefore->day   = 31;
+    $carbondate_yearafter  = $refdate->copy();
+    $carbondate_yearafter->year = $refdate->year+1;
+    $carbondate_yearafter->month = 1;
+    $carbondate_yearafter->day   = 1;
+    $newsobjects = NewsObject
+      ::where('newsdate', '>', $carbondate_yearbefore)
+      ->where('newsdate', '<', $carbondate_yearafter)
+      ->orderBy('newsdate', 'asc')
+      ->paginate($n_paginate);
+    $yearobj = new YearObject($refdate);
+    $listing_subtitle = "Artigos no ano $refdate->year";
+    return view('entrance', [
+      'newsobjects'      => $newsobjects,
+      'listing_subtitle' => $listing_subtitle,
+    ]);
+  } // ends list_news_for_year()
+
   public function list_news_for_month($year=null, $month=null) {
     $n_paginate = self::get_n_paginate();
     if ($year==null || $month==null) {
@@ -185,6 +242,7 @@ class NoticiasController extends Controller {
     $newsobjects = NewsObject
       ::where('newsdate', '<', $nextmonthdate)
       ->where('newsdate', '>', $previousmonthlastdaydate)
+      ->orderBy('newsdate', 'asc')
       ->paginate($n_paginate);
     $monthobj = new MonthObject($refdate);
     $listing_subtitle = "Artigos no mês $monthobj->monthstr de $refdate->year";

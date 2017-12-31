@@ -8,6 +8,8 @@
   <hr>
   <h4>Arquivo</h4>
   <ol class="list-unstyled">
+    <br>
+    <h5>Meses Recentes</h5>
     @foreach ($news_obj->get_previous_months_as_objs() as $monthobj)
       <li>
         <a href="{{ route('newspermonthroute', $monthobj->routeurl_as_array) }}">
@@ -18,10 +20,22 @@
         </span>
       </li>
     @endforeach
+    <br>
+    <h5>Anos Recentes</h5>
+    @foreach ($news_obj->get_previous_years_as_objs() as $yearobj)
+      <li>
+        <a href="{{ route('newsperyearroute', $yearobj->routeurl) }}">
+          {{ $yearobj->carbondate->year }}
+        </a>
+        <span style="font-size:small">
+          ({{ $yearobj->total_newspieces }})
+        </span>
+      </li>
+    @endforeach
     <hr>
     <li>
       <a href="{{ route('entranceroute') }}">
-        Todas
+        Todo o Acervo
       </a>
       <span style="font-size:small">
         ({{ $news_obj->total_de_noticias }})

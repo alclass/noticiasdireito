@@ -13,6 +13,10 @@ use Spatie\Feed\FeedItem;
 
 class NewsObject extends Model implements Feedable {
 
+  /*
+        BEGINNING OF STATIC METHODS
+  */
+
   public static function getLastN($n_lastones=3) {
     $n_lastones = intval($n_lastones);
     if ($n_lastones<1) {
@@ -28,7 +32,7 @@ class NewsObject extends Model implements Feedable {
     }
     // non-production cases fall here
     return self::orderBy('newsdate', 'desc')->take($n_lastones)->get();
-  }
+  } // ends static getLastN()
 
   public static function fetch_most_recent() {
     return NewsObject
@@ -47,7 +51,79 @@ class NewsObject extends Model implements Feedable {
     $news_object->subtitle = 'O operador do Direito tem sua honra atrelada à honestidade.';
     $news_object->description = 'O Direito é a linha de base para o que chamamos de Sociedade Democrática de Direito. O Direito preconiza: ser honesto sempre e acima de tudo!';
     return $news_object;
-  }
+  } // ends static get_last_or_create_mock()
+
+  private static function count_total_newspieces_in_year_general($carbondate) {
+    $carbondate_yearbefore = $carbondate->copy();
+    $carbondate_yearbefore->year  = $carbondate->year-1;
+    $carbondate_yearbefore->month = 12;
+    $carbondate_yearbefore->day   = 31;
+    $carbondate_yearafter  = $carbondate->copy();
+    $carbondate_yearafter->year = $carbondate->year+1;
+    $carbondate_yearafter->month = 1;
+    $carbondate_yearafter->day   = 1;
+    $total_newspieces_in_year = self
+      ::where('newsdate', '>', $carbondate_yearbefore)
+      ->where('newsdate', '<', $carbondate_yearafter)
+      ->count();
+    return $total_newspieces_in_year;
+  } // ends static count_total_newspieces_in_year_general()
+
+  private static function count_total_newspieces_in_year_inprod($carbondate) {
+    /*
+      In production, News Objects are listed up until today's date.
+      There may be future dated pieces that, in this case,
+        must not be listed.
+
+      So here are the cases:
+      1) if param year (in $carbondate) is less than $today->year,
+        return the general counting, ie, count all items in param year
+      2) else if param year (in $carbondate) is more than $today->year,
+        return 0
+      3) however if param year is equal to $today->year,
+        cut off count at today's date ($today)
+    */
+    $most_recent_newsobj = self::fetch_most_recent();
+    if ($most_recent_newsobj == null) {
+      // db is empty, return zero
+      return 0;
+    }
+    $today = Carbon::today();
+    // case 1) if param year (in $carbondate) is less than $today->year,
+    if ($most_recent_newsobj->newsdate->year < $today->year) {
+      return self::count_total_newspieces_in_year_general($carbondate);
+    }
+    // case 2) else if param year (in $carbondate) is more than $today->year,
+    if ($most_recent_newsobj->newsdate->year > $today->year) {
+      // in production, this is 0 (see also method's docstring)
+      return 0;
+    }
+    /*
+    case 3) however if param year is equal to $today->year
+
+      From this point on, param year is equal to $today->year
+      so, cut off counting at today's date ($today)
+    */
+    $carbondate_yearbefore = $carbondate->year - 1;
+    $total_newspieces_in_year = self
+      ::where('newsdate', '>', $carbondate_yearbefore)
+      ->where('newsdate', '<=', $today)
+      ->count();
+    return $total_newspieces_in_year;
+  } // ends static count_total_newspieces_in_year_inprod()
+
+  public static function count_total_newspieces_in_year($p_carbondate) {
+    if ($p_carbondate==null) {
+      $today = Carbon::today();
+      $carbondate = Carbon::today();
+    } else {
+      $carbondate = $p_carbondate->copy();
+    }
+    if (\App::environment('production')) {
+      return self::count_total_newspieces_in_year_inprod($carbondate);
+    }
+    return self::count_total_newspieces_in_year_general($carbondate);
+  } // ends static count_total_newspieces_in_year()
 
   public static function count_total_newspieces_in_month($p_carbondate) {
     $today = Carbon::today();
@@ -73,6 +149,10 @@ class NewsObject extends Model implements Feedable {
     }
     return $total_newspieces_in_month;
   }
+
+  /*
+        END OF STATIC METHODS
+  */
 
   protected $table   = 'newsobjects';
   protected $dates   = ['newsdate'];
@@ -211,10 +291,25 @@ class NewsObject extends Model implements Feedable {
     return self::getLastN($n_lastones);
   }
 
+  public function get_previous_years_as_objs($n_previous_max=3) {
+    $first_newspiece = self::orderBy('newsdate', 'asc')->first();
+    if ($first_newspiece==null) {
+      return MonthObject::make_objs_as_collect(); // use default
+    }
+    $firstdate = $first_newspiece->newsdate->copy();
+    $today = Carbon::today();
+    $n_years = $today->diffInYears($firstdate) + 1;
+    if ($n_years > $n_previous_max) {
+      $n_years = $n_previous_max;
+    }
+    $yearobjs = YearObject::make_objs_as_collect($n_years, $today);
+    return $yearobjs;
+  }
+
   public function get_previous_months_as_objs($n_previous_max=5) {
     $first_newspiece = self::orderBy('newsdate', 'asc')->first();
     if ($first_newspiece==null) {
-      return MonthObject::make_monthobjs_as_collectof(); // use default
+      return MonthObject::make_objs_as_collect(); // use default
     }
     $firstdate = $first_newspiece->newsdate->copy();
     $today = Carbon::today();
@@ -222,7 +317,7 @@ class NewsObject extends Model implements Feedable {
     if ($n_months > $n_previous_max) {
       $n_months = $n_previous_max;
     }
-    $monthobjs = MonthObject::make_monthobjs_as_collectof($n_months, $today);
+    $monthobjs = MonthObject::make_objs_as_collect($n_months, $today);
     return $monthobjs;
   }
 
