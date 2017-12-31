@@ -52,4 +52,4 @@ Route::get('/{year}/{month}/{day}/{underlined_newstitle}', [
   'uses' => 'NoticiasController@show_newspage',
 ]);
 
-// Route::feeds();
+Route::feeds();
