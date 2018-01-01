@@ -25,7 +25,7 @@ class MonthObject {
       $refdate = $p_refdate->copy();
     }
     $months_as_collect = collect();
-    for ($i=0; $i < $n_previous_months; $i++) {
+    for ($i=0; $i <= $n_previous_months; $i++) {
       // echo "i=$i date=$refdate->month";
       $monthcarbon = $refdate->copy();
       $monthobj = new self($monthcarbon);
