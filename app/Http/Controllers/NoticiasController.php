@@ -185,6 +185,7 @@ class NoticiasController extends Controller {
     if ($carbondate_yearafter > $today) {
       $cuteoff_date = $today->copy()->addDays(1);
     }
+    $n_paginate = self::get_n_paginate();
     $newsobjects = NewsObject
       ::where('newsdate', '>', $carbondate_yearbefore)
       ->where('newsdate', '<', $cuteoff_date)
