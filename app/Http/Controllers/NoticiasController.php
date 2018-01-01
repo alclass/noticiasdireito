@@ -166,15 +166,24 @@ class NoticiasController extends Controller {
     ]);
   }
 
-  private function list_news_for_current_year_inprodenv() {
-    $refdate = Carbon::today();
+  private function list_news_for_year_inprod($refdate) {
     $carbondate_yearbefore = $refdate->copy();
     $carbondate_yearbefore->year  = $refdate->year-1;
     $carbondate_yearbefore->month = 12;
     $carbondate_yearbefore->day   = 31;
+    $carbondate_yearafter  = $refdate->copy();
+    $carbondate_yearafter->year = $refdate->year+1;
+    $carbondate_yearafter->month = 1;
+    $carbondate_yearafter->day   = 1;
+    $today = Carbon::today();
+    // Enters $cuteoff_date
+    $cuteoff_date = $carbondate_yearafter;
+    if ($carbondate_yearafter > $today) {
+      $cuteoff_date = $today->copy()->addDays(1);
+    }
     $newsobjects = NewsObject
       ::where('newsdate', '>', $carbondate_yearbefore)
-      ->where('newsdate', '<=', $today)
+      ->where('newsdate', '<', $cuteoff_date)
       ->orderBy('newsdate', 'asc')
       ->paginate($n_paginate);
     $yearobj = new YearObject($refdate);
@@ -185,22 +194,7 @@ class NoticiasController extends Controller {
     ]);
   }
 
-  public function list_news_for_year($year=null) {
-    $n_paginate = self::get_n_paginate();
-    if ($year==null) {
-      //$refdate = Carbon::today();
-      return $this->mount_newslisting_for_entrance();
-      // return redirect()->route('entranceroute')->with(['newsobjects'=>$newsobjects]);
-    }
-    $refdatestr = "$year-01-01";
-    $refdate = new Carbon($refdatestr);
-    $today = Carbon::today();
-    if (\App::environment('production')) {
-      if ($today->year < $refdatestr->year) {
-        return $this->mount_newslisting_for_entrance();
-      }
-      return $this->list_news_for_current_year_inprodenv();
-    }
+  private function list_news_for_year_nonprod($refdate) {
     $carbondate_yearbefore = $refdate->copy();
     $carbondate_yearbefore->year  = $refdate->year-1;
     $carbondate_yearbefore->month = 12;
@@ -209,6 +203,8 @@ class NoticiasController extends Controller {
     $carbondate_yearafter->year = $refdate->year+1;
     $carbondate_yearafter->month = 1;
     $carbondate_yearafter->day   = 1;
+
+    $n_paginate = self::get_n_paginate();
     $newsobjects = NewsObject
       ::where('newsdate', '>', $carbondate_yearbefore)
       ->where('newsdate', '<', $carbondate_yearafter)
@@ -220,14 +216,44 @@ class NoticiasController extends Controller {
       'newsobjects'      => $newsobjects,
       'listing_subtitle' => $listing_subtitle,
     ]);
+  } // ends list_news_for_year_general_case()
+
+  public function list_news_for_year($year=null) {
+    $year = intval($year);
+    // Remember that intval(null) or intval(<non-number>) is 0
+    if ($year < 1) {
+      return redirect()->route('entranceroute');
+    }
+    $refdatestr = "$year-01-01";
+    $refdate = new Carbon($refdatestr);
+    $today = Carbon::today();
+    if (\App::environment('production')) {
+      if ($today->year < $refdate->year) {
+        /*
+          This case is the 'news items are in the future',
+          redirect to the 'entrance' route
+          which lists all past news items
+        */
+        return redirect()->route('entranceroute');
+      }
+      /*
+        From here on, $refdate->year is either
+        equal or less than today's date
+      */
+      return $this->list_news_for_year_inprod($refdate);
+    }
+    return $this->list_news_for_year_nonprod($refdate);
   } // ends list_news_for_year()
 
   public function list_news_for_month($year=null, $month=null) {
-    $n_paginate = self::get_n_paginate();
-    if ($year==null || $month==null) {
-      //$refdate = Carbon::today();
-      return $this->mount_newslisting_for_entrance();
-      // return redirect()->route('entranceroute')->with(['newsobjects'=>$newsobjects]);
+    $year  = intval($year);
+    $month = intval($month);
+    // Remember that intval(null) or intval(<non-number>) is 0
+    if ($year < 1 || $month < 1) {
+      return redirect()->route('entranceroute');
+    }
+    if ($month > 12) {
+      $month = 12;
     }
     $refdatestr = "$year-$month-01";
     $refdate = new Carbon($refdatestr);
@@ -237,8 +263,9 @@ class NoticiasController extends Controller {
         return $this->list_news_for_current_month_inprodenv();
       }
     }
-    $nextmonthdate = $refdate->copy()->addMonths(1);
+    $nextmonthdate            = $refdate->copy()->addMonths(1);
     $previousmonthlastdaydate = $refdate->copy()->addDays(-1);
+    $n_paginate = self::get_n_paginate();
     $newsobjects = NewsObject
       ::where('newsdate', '<', $nextmonthdate)
       ->where('newsdate', '>', $previousmonthlastdaydate)
