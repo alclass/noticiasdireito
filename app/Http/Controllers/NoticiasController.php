@@ -167,6 +167,11 @@ class NoticiasController extends Controller {
   }
 
   private function list_news_for_year_inprod($refdate) {
+    $today = Carbon::today();
+    if ($refdate==null) {
+      $refdate = $today;
+    }
+    // TO-DO: test $refdate's type
     $carbondate_yearbefore = $refdate->copy();
     $carbondate_yearbefore->year  = $refdate->year-1;
     $carbondate_yearbefore->month = 12;
@@ -175,7 +180,6 @@ class NoticiasController extends Controller {
     $carbondate_yearafter->year = $refdate->year+1;
     $carbondate_yearafter->month = 1;
     $carbondate_yearafter->day   = 1;
-    $today = Carbon::today();
     // Enters $cuteoff_date
     $cuteoff_date = $carbondate_yearafter;
     if ($carbondate_yearafter > $today) {
@@ -186,7 +190,6 @@ class NoticiasController extends Controller {
       ->where('newsdate', '<', $cuteoff_date)
       ->orderBy('newsdate', 'asc')
       ->paginate($n_paginate);
-    $yearobj = new YearObject($refdate);
     $listing_subtitle = "Artigos no ano $refdate->year";
     return view('entrance', [
       'newsobjects'      => $newsobjects,
@@ -203,14 +206,12 @@ class NoticiasController extends Controller {
     $carbondate_yearafter->year = $refdate->year+1;
     $carbondate_yearafter->month = 1;
     $carbondate_yearafter->day   = 1;
-
     $n_paginate = self::get_n_paginate();
     $newsobjects = NewsObject
       ::where('newsdate', '>', $carbondate_yearbefore)
       ->where('newsdate', '<', $carbondate_yearafter)
       ->orderBy('newsdate', 'asc')
       ->paginate($n_paginate);
-    $yearobj = new YearObject($refdate);
     $listing_subtitle = "Artigos no ano $refdate->year";
     return view('entrance', [
       'newsobjects'      => $newsobjects,

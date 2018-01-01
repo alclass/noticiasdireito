@@ -23,15 +23,12 @@ class YearObject {
       $refdate = $p_refdate->copy();
     }
     $years_as_collect = collect();
-    for ($i=0; $i < $n_previous_years; $i++) {
+    for ($i=0; $i <= $n_previous_years; $i++) {
       // echo "i=$i date=$refdate->month";
       $carbondate = $refdate->copy();
       $yearobj = new self($carbondate);
       $years_as_collect->push($yearobj);
       $refdate->addYears(-1);
-      if ($refdate->year == $carbondate->year) {
-        $refdate->addYears(-1);
-      }
     }
     return $years_as_collect;
   }

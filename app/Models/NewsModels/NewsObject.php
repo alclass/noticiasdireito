@@ -319,7 +319,7 @@ class NewsObject extends Model implements Feedable {
     if ($first_newspiece==null) {
       return MonthObject::make_objs_as_collect(); // use default
     }
-    $firstdate = $first_newspiece->newsdate->copy();
+    $firstdate = $first_newspiece->newsdate;
     $today = Carbon::today();
     $n_years = $today->diffInYears($firstdate) + 1;
     if ($n_years > $n_previous_max) {
