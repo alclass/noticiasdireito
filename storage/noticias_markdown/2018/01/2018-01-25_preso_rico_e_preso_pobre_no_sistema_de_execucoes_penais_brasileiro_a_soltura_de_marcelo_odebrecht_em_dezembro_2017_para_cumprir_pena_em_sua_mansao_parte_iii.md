@@ -8,17 +8,17 @@ Na parte anterior, passávamos em revista as condições de execução de pena d
 - tanto no sentido de alcançar o que foi feito em crimes, 
 - quanto no sentido comparativo da pena de presos mais pobres. 
 
-Embora este seja uma assunto para uma próxima ocasião, como tem dito várias vezes o Ministro Luís Roberto Barroso, do Supremo Tribunal Federal, em paráfrase: 
+Embora este seja um assunto para uma próxima ocasião, como tem dito várias vezes o Ministro Luís Roberto Barroso, do Supremo Tribunal Federal, em paráfrase: 
 
 <cite>
 Tais corrupções, acertos de esquemas e superfaturamentos tornaram-se o "normal" neste país; _**nós** temos que mudar isso_.
 </cite>
 
-Voltemos então brevemente ao cartel das empreiteiras mencionado na parte anterior, em relação às construções de metrô país a fora.
+Voltemos então brevemente ao cartel das empreiteiras mencionado na parte anterior, em relação às construções de metrô país afora.
 
-##### O Codenome do Cartel era **Tatu Tênis Clube**
+##### O Codinome do Cartel era **Tatu Tênis Clube**
 
-O nome Tatu, como codenome para o Cartel, era dado pelo apelido da principal máquina que faz as escavações de túneis de metrô: o _tatu_ ou _tatuzão_. Segundo as reportagens, eles também tinham uma aparência de confraria esportiva, sendo G5 o grupo das cinco maiores empreiteiras. 
+O nome Tatu, como codinome para o Cartel, era dado pelo apelido da principal máquina que faz as escavações de túneis de metrô: o _tatu_ ou _tatuzão_. Segundo as reportagens, eles também tinham uma aparência de confraria esportiva, havendo até mesmo um **G5**, formando o grupo das cinco maiores empreiteiras envolvidas no _**Tatu**_.
 
 (Abrindo um breve parêntese, não obstante, o que as reportagens não conseguem explicar -- ou talvez ninguém consiga explicar --, é como essas falcutruas são feitas, dado que licitações possuem um arcabouço protetivo, por comissões de licitação independentes e são acompanhadas e auditadas pelas controladorias e tribunais de conta.)
 
@@ -27,6 +27,7 @@ O nome Tatu, como codenome para o Cartel, era dado pelo apelido da principal má
 A condenação de Marcelo Odebrecht em tela, por sua vez, é _res judicata_, ou seja, _**coisa julgada**_, e alcança apenas as acusações que pertenciam às ações penais nas quais foi condenado. Essa coincidência do **Tatu Tênis Clube** nas notícias, na mesma e exata _data_, é de certo uma estonteante coincidência, pois, Marcelo Odebrecht foi provavelmente condenado por apenas uma pequena parte de tudo que deve ter ocorrido, pois, com a surpresa ou não da concorrente notícia sobre o **Tatu Tênis Clube**, há certamente muito, muito mais envolvido.
 
 \*\*\*
+
 
 Na próxima parte e na seguinte, traremos referências de relatórios sobre a situação do Sistema Prisional Brasileiro.
 
